@@ -103,15 +103,20 @@ The CANDO benchmarking workflows require the corresponding CANDO software and co
 
 For strict reproduction, use the software versions, model configurations, and execution settings reported in the manuscript and associated computational environment records.
 
-## Acknowledgements
+## Computing Resources and Acknowledgements
 
-We acknowledge computing resources provided by the Empire AI Consortium, Inc., supported by Empire State Development, the Simons Foundation, and the Secunda Family Foundation, and by the Center for Computational Research at the University at Buffalo.
+We gratefully acknowledge use of the research computing resources of the Empire AI Consortium, Inc, with support from Empire State Development of the State of New York, the Simons Foundation, and the Secunda Family Foundation.
+
+Support provided by the Center for Computational Research at the University at Buffalo.
+
+1. Bloom, S., Brumberg, J. C., Fisk, I., Harrison, R. J., Hull, R., Ramasubramanian, M., Van Vliet, K., & Wing, J. (2025). Empire AI: A new model for provisioning AI and HPC for academic research in the public good. *Practice and Experience in Advanced Research Computing (PEARC '25).* ACM. https://doi.org/10.1145/3708035.3736070  
+2. Center for Computational Research, University at Buffalo. https://ubir.buffalo.edu/xmlui/handle/10477/79221
 
 ## Citation
 
 If you use this repository or the associated dataset, please cite the corresponding manuscript:
 
-**How AlphaFold 3 helps with multiscale drug discovery** Ratilal Akabari, William Mangione, Zackary Falls, Ram Samudrala
+**How AlphaFold 3 helps with multiscale drug discovery.** Ratilal Akabari, William Mangione, Zackary Falls, Ram Samudrala
 2026.10.19.757941; doi: https://doi.org/10.64898/2026.10.19.757941 
 
 ## Contact
