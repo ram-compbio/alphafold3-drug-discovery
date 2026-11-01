@@ -1,13 +1,13 @@
-#!/projects/academic/rams/ratilala/venvs/af/bin/python3.10
+#!/usr/bin/env python3
 import os
 import json
 import time
 import pandas as pd
 from concurrent.futures import ProcessPoolExecutor
 
-OUTPUT = "/projects/academic/rams/ratilala/af3/interactions/output"
-CCR_EAI = "/projects/academic/rams/ratilala/af3/interactions/_scripts/lists/ccr_eai.txt"
-MATRIX_DIR = "/projects/academic/rams/ratilala/af3/interactions/canbenchmarks/matrices"
+OUTPUT = "af3/interactions/output"
+CCR_EAI = "af3/interactions/_scripts/lists/ccr_eai.txt"
+MATRIX_DIR = "af3/interactions/canbenchmarks/matrices"
 
 def process_pdb(pdb, metric):
     """
