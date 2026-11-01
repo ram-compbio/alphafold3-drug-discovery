@@ -103,6 +103,10 @@ The CANDO benchmarking workflows require the corresponding CANDO software and co
 
 For strict reproduction, use the software versions, model configurations, and execution settings reported in the manuscript and associated computational environment records.
 
+## Acknowledgements
+
+We acknowledge computing resources provided by the Empire AI Consortium, Inc., supported by Empire State Development, the Simons Foundation, and the Secunda Family Foundation, and by the Center for Computational Research at the University at Buffalo.
+
 ## Citation
 
 If you use this repository or the associated dataset, please cite the corresponding manuscript:
