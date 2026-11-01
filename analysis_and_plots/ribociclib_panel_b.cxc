@@ -1,0 +1,26 @@
+open 4ek4A~7948_model.cif
+
+hide atoms
+cartoon
+
+# Softer AF3 confidence coloring
+color byattribute pLDDT_score palette "white:#E8F4F8:#8FD3E8:#3A9BCB:#1F77B4"
+
+# Ribociclib
+select :LIG_XYZ
+show sel
+style sel stick
+color sel orange
+
+size stickRadius 0.25
+
+# View
+view
+zoom 1.35
+
+# Rendering
+lighting soft
+
+set bgColor white
+
+save ribociclib_panel_b_Nature.png width 3000 supersample 4

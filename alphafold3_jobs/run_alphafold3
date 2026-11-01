@@ -1,0 +1,117 @@
+#!/bin/bash
+# Author: Ratie Akabari
+# Description:
+# This script runs the AlphaFold3 using Singularity. It requires an input JSON file
+# (describing the sequences to process) and an output directory where the results will be stored.
+# Paths to the required directories and Singularity image are predefined but can be modified if needed.
+
+# Usage:
+# run_alphafold3 <INPUT_JSON> <OUTPUT_DIR>
+# Example:
+# run_alphafold3 /path/to/input_jsons/alphafold_input.json /path/to/output
+
+# Arguments:
+#   INPUT_JSON: Full path to the input JSON file (e.g., /path/to/input_jsons/alphafold_input.json)
+#   OUTPUT_DIR: Path to the directory where output files will be saved
+
+# ================== Variables ==================#
+
+trap - EXIT INT TERM
+
+INPUT_JSON=$1
+OUTPUT_DIR=$2
+SINGULARITY_DIR="/projects/academic/rams/compbio/protinfo/external/alphafold3-singularity"
+DATABASE_DIR="/util/software/data/alphafold3"
+INPUT_DIR=$(dirname "$INPUT_JSON")
+SINGULARITY_IMAGE="${SINGULARITY_DIR}/alphafold3.sif"
+
+# ================== Help function ==================#
+function show_help() {
+    echo "AlphaFold Singularity Script"
+    echo ""
+    echo "Usage: runAlphafold3 <INPUT_JSON> <OUTPUT_DIR>"
+    echo ""
+    echo "Arguments:"
+    echo "  <INPUT_JSON>  Full path to the input JSON file describing sequences."
+    echo "  <OUTPUT_DIR>  Path to the directory where results will be stored."
+    echo ""
+    echo "Example:"
+    echo "  runAlphafold3 /path/to/input_jsons/alphafold_input.json /path/to/output"
+    echo ""
+    echo "The following directories are already configured:"
+    echo "  - SINGULARITY_DIR: $SINGULARITY_DIR"
+    echo "  - DATABASE_DIR: $DATABASE_DIR"
+    echo ""
+    echo "Notes:"
+    echo "  - Singularity image is already installed and configured."
+    echo "  - Ensure the JSON file exists and the output directory is writable."
+}
+
+# ================== Check if help is requested ==================#
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    show_help
+    exit 0
+fi
+
+# ================== Check for required arguments ==================#
+if [[ $# -lt 2 ]]; then
+    echo "Error: Missing arguments."
+    echo "Run '$0 --help' for usage information."
+    exit 1
+fi
+
+echo "============================================="
+
+# ================== Wait for GPU availability ==================#
+echo "Job started at: $(date)"
+echo "Hostname: $(hostname)"
+echo "CUDA_VISIBLE_DEVICES: ${CUDA_VISIBLE_DEVICES:-unset}"
+echo "============================================="
+nvidia-smi -L || true
+
+echo "Waiting for CUDA/JAX GPU availability..."
+SING_PYTHON="singularity exec --nv $SINGULARITY_IMAGE python"
+MAX_WAIT=600
+INTERVAL=10
+WAITED=0
+
+while true; do
+  $SING_PYTHON - << 'EOF'
+import jax
+gpus = [d for d in jax.devices() if d.platform == "gpu"]
+print("JAX devices:", gpus)
+exit(0 if gpus else 1)
+EOF
+
+  if [ $? -eq 0 ]; then
+    echo "CUDA GPU is ready inside Singularity."
+    break
+  fi
+
+  if [ $WAITED -ge $MAX_WAIT ]; then
+    echo "ERROR: GPU not available after ${MAX_WAIT}s inside Singularity"
+    date
+    hostname
+    nvidia-smi || true
+    exit 1
+  fi
+
+  sleep $INTERVAL
+  WAITED=$((WAITED + INTERVAL))
+done
+
+echo "============================================="
+
+# ================== Main singularity command ==================#
+singularity exec \
+    --nv \
+    --bind "${INPUT_DIR}:/root/af_input" \
+    --bind "${OUTPUT_DIR}:/root/af_output" \
+    --bind "${SINGULARITY_DIR}:/root/models" \
+    --bind "${DATABASE_DIR}:/root/public_databases" \
+    "${SINGULARITY_IMAGE}" \
+    python /app/alphafold/run_alphafold.py \
+    --json_path=/root/af_input/$(basename "$INPUT_JSON") \
+    --model_dir=/root/models \
+    --output_dir=/root/af_output \
+    --db_dir=/root/public_databases

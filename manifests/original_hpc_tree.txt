@@ -1,0 +1,2568 @@
+canbenchmarks
+├── matrices
+│   ├── _scripts
+│   │   ├── chain_pair_iptm.out
+│   │   ├── chain_pair_iptm.py
+│   │   ├── chain_pair_iptm.slurm
+│   │   ├── chain_pair_pae_min.out
+│   │   ├── chain_pair_pae_min.py
+│   │   ├── chain_pair_pae_min.slurm
+│   │   ├── filter.sh
+│   │   ├── iptm.out
+│   │   ├── iptm.py
+│   │   ├── iptm.slurm
+│   │   ├── pdb_lists
+│   │   │   ├── _create_pdb_lists.py
+│   │   │   ├── all200_plddt.csv
+│   │   │   ├── all200_res.csv
+│   │   │   ├── bottom100_plddt.csv
+│   │   │   ├── bottom100_res.csv
+│   │   │   ├── current_1103.csv
+│   │   │   ├── homo_sapien-metadata.xlsx
+│   │   │   ├── random200.csv
+│   │   │   ├── top100_plddt.csv
+│   │   │   └── top100_res.csv
+│   │   ├── ptm.out
+│   │   ├── ptm.py
+│   │   ├── ptm.slurm
+│   │   ├── ranking_score.out
+│   │   ├── ranking_score.py
+│   │   └── ranking_score.slurm
+│   ├── bandock.tsv ⇒ /projects/academic/rams/ratilala/cmpds_inds/rd_ecfp4-int-dice-alphafold-homo_sapien-coach-c0.0-p0.0-dCxP-approved.tsv
+│   ├── bandockplus.tsv
+│   ├── bandockplus_1103_2449.tsv
+│   ├── bandockplus_af2.tsv ⇒ /projects/academic/rams/ratilala/cmpds_inds/bandockplus_legacy-homo_sapien-v2.9-count-pki5.tsv
+│   ├── bandockplus_all200_plddt.tsv
+│   ├── bandockplus_all200_res.tsv
+│   ├── bandockplus_bottom100_plddt.tsv
+│   ├── bandockplus_bottom100_res.tsv
+│   ├── bandockplus_random200.tsv
+│   ├── bandockplus_top100_plddt.tsv
+│   ├── bandockplus_top100_res.tsv
+│   ├── current_matrix-1
+│   │   ├── bandockplus_933_2449.tsv
+│   │   ├── iptm_766_2449.tsv
+│   │   ├── iptm_858_2449.tsv
+│   │   └── iptm_933_2449.tsv
+│   ├── iptm_1103_2449.tsv
+│   ├── iptm_all200_plddt.tsv
+│   ├── iptm_all200_res.tsv
+│   ├── iptm_bottom100_plddt.tsv
+│   ├── iptm_bottom100_res.tsv
+│   ├── iptm_random200.tsv
+│   ├── iptm_top100_plddt.tsv
+│   ├── iptm_top100_res.tsv
+│   ├── random-0.tsv ⇒ /projects/academic/rams/ratilala/cmpds_inds/random_matrices/random-homo_sapien-af2-v2.9-approved/random-0.tsv
+│   ├── random-1.tsv ⇒ /projects/academic/rams/ratilala/cmpds_inds/random_matrices/random-homo_sapien-af2-v2.9-approved/random-1.tsv
+│   └── random-2.tsv ⇒ /projects/academic/rams/ratilala/cmpds_inds/random_matrices/random-homo_sapien-af2-v2.9-approved/random-2.tsv
+├── new
+│   ├── _purge
+│   │   ├── bandockplus_933_2449
+│   │   │   ├── bandockplus_933_2449_aindcg.tsv
+│   │   │   ├── bandockplus_933_2449_naia_nndcg.tsv
+│   │   │   └── scripts
+│   │   │       ├── bandockplus_933_2449.out
+│   │   │       ├── bandockplus_933_2449.py
+│   │   │       ├── bandockplus_933_2449.slurm
+│   │   │       ├── pairwise_results
+│   │   │       │   └── pairwise_results-bandockplus_933_2449-10-associated.csv
+│   │   │       ├── raw_results
+│   │   │       │   ├── raw_results-bandockplus_933_2449-10-associated.csv
+│   │   │       │   └── raw_results_ndcg-bandockplus_933_2449.csv
+│   │   │       └── results_analysed_named
+│   │   │           ├── results_analysed_named-bandockplus_933_2449-10-associated.tsv
+│   │   │           ├── results_analysed_named-ndcg-bandockplus_933_2449-10-associated.tsv
+│   │   │           └── results_analysed_named_ndcg-bandockplus_933_2449.tsv
+│   │   ├── iptm_858_2449
+│   │   │   ├── iptm_858_2449_aindcg.tsv
+│   │   │   ├── iptm_858_2449_naia_nndcg.tsv
+│   │   │   └── scripts
+│   │   │       ├── iptm_858_2449.out
+│   │   │       ├── iptm_858_2449.py
+│   │   │       ├── iptm_858_2449.slurm
+│   │   │       ├── pairwise_results
+│   │   │       │   └── pairwise_results-iptm_858_2449-10-associated.csv
+│   │   │       ├── raw_results
+│   │   │       │   ├── raw_results-iptm_858_2449-10-associated.csv
+│   │   │       │   └── raw_results_ndcg-iptm_858_2449.csv
+│   │   │       └── results_analysed_named
+│   │   │           ├── results_analysed_named-iptm_858_2449-10-associated.tsv
+│   │   │           ├── results_analysed_named-ndcg-iptm_858_2449-10-associated.tsv
+│   │   │           └── results_analysed_named_ndcg-iptm_858_2449.tsv
+│   │   └── iptm_933_2449
+│   │       ├── iptm_933_2449_aindcg.tsv
+│   │       ├── iptm_933_2449_naia_nndcg.tsv
+│   │       └── scripts
+│   │           ├── iptm_933_2449.out
+│   │           ├── iptm_933_2449.py
+│   │           ├── iptm_933_2449.slurm
+│   │           ├── pairwise_results
+│   │           │   └── pairwise_results-iptm_933_2449-10-associated.csv
+│   │           ├── raw_results
+│   │           │   ├── raw_results-iptm_933_2449-10-associated.csv
+│   │           │   └── raw_results_ndcg-iptm_933_2449.csv
+│   │           └── results_analysed_named
+│   │               ├── results_analysed_named-iptm_933_2449-10-associated.tsv
+│   │               ├── results_analysed_named-ndcg-iptm_933_2449-10-associated.tsv
+│   │               └── results_analysed_named_ndcg-iptm_933_2449.tsv
+│   ├── bandock
+│   │   ├── bandock_aindcg.tsv
+│   │   ├── bandock_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandock.out
+│   │       ├── bandock.py
+│   │       ├── bandock.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandock-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandock-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandock.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandock-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandock-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandock.tsv
+│   ├── bandockplus
+│   │   ├── bandockplus_aindcg.tsv
+│   │   ├── bandockplus_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus.out
+│   │       ├── bandockplus.py
+│   │       ├── bandockplus.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus.tsv
+│   ├── bandockplus_1103_2449
+│   │   ├── bandockplus_1103_2449_aindcg.tsv
+│   │   ├── bandockplus_1103_2449_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_1103_2449.out
+│   │       ├── bandockplus_1103_2449.py
+│   │       ├── bandockplus_1103_2449.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_1103_2449-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_1103_2449-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_1103_2449.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_1103_2449-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_1103_2449-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_1103_2449.tsv
+│   ├── bandockplus_af2
+│   │   ├── bandockplus_af2_aindcg.tsv
+│   │   ├── bandockplus_af2_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_af2.out
+│   │       ├── bandockplus_af2.py
+│   │       ├── bandockplus_af2.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_af2-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_af2-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_af2.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_af2-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_af2-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_af2.tsv
+│   ├── bandockplus_all200_plddt
+│   │   ├── bandockplus_all200_plddt_aindcg.tsv
+│   │   ├── bandockplus_all200_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_all200_plddt.out
+│   │       ├── bandockplus_all200_plddt.py
+│   │       ├── bandockplus_all200_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_all200_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_all200_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_all200_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_all200_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_all200_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_all200_plddt.tsv
+│   ├── bandockplus_all200_res
+│   │   ├── bandockplus_all200_res_aindcg.tsv
+│   │   ├── bandockplus_all200_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_all200_res.out
+│   │       ├── bandockplus_all200_res.py
+│   │       ├── bandockplus_all200_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_all200_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_all200_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_all200_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_all200_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_all200_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_all200_res.tsv
+│   ├── bandockplus_bottom100_plddt
+│   │   ├── bandockplus_bottom100_plddt_aindcg.tsv
+│   │   ├── bandockplus_bottom100_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_bottom100_plddt.out
+│   │       ├── bandockplus_bottom100_plddt.py
+│   │       ├── bandockplus_bottom100_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_bottom100_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_bottom100_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_bottom100_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_bottom100_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_bottom100_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_bottom100_plddt.tsv
+│   ├── bandockplus_bottom100_res
+│   │   ├── bandockplus_bottom100_res_aindcg.tsv
+│   │   ├── bandockplus_bottom100_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_bottom100_res.out
+│   │       ├── bandockplus_bottom100_res.py
+│   │       ├── bandockplus_bottom100_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_bottom100_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_bottom100_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_bottom100_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_bottom100_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_bottom100_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_bottom100_res.tsv
+│   ├── bandockplus_random200
+│   │   ├── bandockplus_random200_aindcg.tsv
+│   │   ├── bandockplus_random200_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_random200.out
+│   │       ├── bandockplus_random200.py
+│   │       ├── bandockplus_random200.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_random200-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_random200-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_random200.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_random200-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_random200-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_random200.tsv
+│   ├── bandockplus_top100_plddt
+│   │   ├── bandockplus_top100_plddt_aindcg.tsv
+│   │   ├── bandockplus_top100_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_top100_plddt.out
+│   │       ├── bandockplus_top100_plddt.py
+│   │       ├── bandockplus_top100_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_top100_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_top100_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_top100_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_top100_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_top100_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_top100_plddt.tsv
+│   ├── bandockplus_top100_res
+│   │   ├── bandockplus_top100_res_aindcg.tsv
+│   │   ├── bandockplus_top100_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_top100_res.out
+│   │       ├── bandockplus_top100_res.py
+│   │       ├── bandockplus_top100_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-bandockplus_top100_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-bandockplus_top100_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-bandockplus_top100_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-bandockplus_top100_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-bandockplus_top100_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-bandockplus_top100_res.tsv
+│   ├── iptm_1103_2449
+│   │   ├── iptm_1103_2449_aindcg.tsv
+│   │   ├── iptm_1103_2449_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_1103_2449.out
+│   │       ├── iptm_1103_2449.py
+│   │       ├── iptm_1103_2449.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_1103_2449-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_1103_2449-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_1103_2449.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_1103_2449-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_1103_2449-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_1103_2449.tsv
+│   ├── iptm_all200_plddt
+│   │   ├── iptm_all200_plddt_aindcg.tsv
+│   │   ├── iptm_all200_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_all200_plddt.out
+│   │       ├── iptm_all200_plddt.py
+│   │       ├── iptm_all200_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_all200_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_all200_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_all200_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_all200_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_all200_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_all200_plddt.tsv
+│   ├── iptm_all200_res
+│   │   ├── iptm_all200_res_aindcg.tsv
+│   │   ├── iptm_all200_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_all200_res.out
+│   │       ├── iptm_all200_res.py
+│   │       ├── iptm_all200_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_all200_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_all200_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_all200_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_all200_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_all200_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_all200_res.tsv
+│   ├── iptm_bottom100_plddt
+│   │   ├── iptm_bottom100_plddt_aindcg.tsv
+│   │   ├── iptm_bottom100_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_bottom100_plddt.out
+│   │       ├── iptm_bottom100_plddt.py
+│   │       ├── iptm_bottom100_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_bottom100_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_bottom100_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_bottom100_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_bottom100_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_bottom100_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_bottom100_plddt.tsv
+│   ├── iptm_bottom100_res
+│   │   ├── iptm_bottom100_res_aindcg.tsv
+│   │   ├── iptm_bottom100_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_bottom100_res.out
+│   │       ├── iptm_bottom100_res.py
+│   │       ├── iptm_bottom100_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_bottom100_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_bottom100_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_bottom100_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_bottom100_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_bottom100_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_bottom100_res.tsv
+│   ├── iptm_random200
+│   │   ├── iptm_random200_aindcg.tsv
+│   │   ├── iptm_random200_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_random200.out
+│   │       ├── iptm_random200.py
+│   │       ├── iptm_random200.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_random200-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_random200-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_random200.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_random200-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_random200-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_random200.tsv
+│   ├── iptm_top100_plddt
+│   │   ├── iptm_top100_plddt_aindcg.tsv
+│   │   ├── iptm_top100_plddt_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_top100_plddt.out
+│   │       ├── iptm_top100_plddt.py
+│   │       ├── iptm_top100_plddt.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_top100_plddt-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_top100_plddt-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_top100_plddt.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_top100_plddt-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_top100_plddt-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_top100_plddt.tsv
+│   ├── iptm_top100_res
+│   │   ├── iptm_top100_res_aindcg.tsv
+│   │   ├── iptm_top100_res_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── iptm_top100_res.out
+│   │       ├── iptm_top100_res.py
+│   │       ├── iptm_top100_res.slurm
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-iptm_top100_res-10-associated.csv
+│   │       ├── raw_results
+│   │       │   ├── raw_results-iptm_top100_res-10-associated.csv
+│   │       │   └── raw_results_ndcg-iptm_top100_res.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-iptm_top100_res-10-associated.tsv
+│   │           ├── results_analysed_named-ndcg-iptm_top100_res-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-iptm_top100_res.tsv
+│   ├── random-0
+│   │   ├── random-0_aindcg.tsv
+│   │   ├── random-0_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-random-0-10-associated.csv
+│   │       ├── random-0.out
+│   │       ├── random-0.py
+│   │       ├── random-0.slurm
+│   │       ├── raw_results
+│   │       │   ├── raw_results-random-0-10-associated.csv
+│   │       │   └── raw_results_ndcg-random-0.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-ndcg-random-0-10-associated.tsv
+│   │           ├── results_analysed_named-random-0-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-random-0.tsv
+│   ├── random-1
+│   │   ├── random-1_aindcg.tsv
+│   │   ├── random-1_naia_nndcg.tsv
+│   │   └── scripts
+│   │       ├── pairwise_results
+│   │       │   └── pairwise_results-random-1-10-associated.csv
+│   │       ├── random-1.out
+│   │       ├── random-1.py
+│   │       ├── random-1.slurm
+│   │       ├── raw_results
+│   │       │   ├── raw_results-random-1-10-associated.csv
+│   │       │   └── raw_results_ndcg-random-1.csv
+│   │       └── results_analysed_named
+│   │           ├── results_analysed_named-ndcg-random-1-10-associated.tsv
+│   │           ├── results_analysed_named-random-1-10-associated.tsv
+│   │           └── results_analysed_named_ndcg-random-1.tsv
+│   └── random-2
+│       ├── random-2_aindcg.tsv
+│       ├── random-2_naia_nndcg.tsv
+│       └── scripts
+│           ├── pairwise_results
+│           │   └── pairwise_results-random-2-10-associated.csv
+│           ├── random-2.out
+│           ├── random-2.py
+│           ├── random-2.slurm
+│           ├── raw_results
+│           │   ├── raw_results-random-2-10-associated.csv
+│           │   └── raw_results_ndcg-random-2.csv
+│           └── results_analysed_named
+│               ├── results_analysed_named-ndcg-random-2-10-associated.tsv
+│               ├── results_analysed_named-random-2-10-associated.tsv
+│               └── results_analysed_named_ndcg-random-2.tsv
+├── old
+│   ├── _purge
+│   │   ├── bandockplus_933_2449
+│   │   │   ├── bandockplus_933_2449_aia.tsv
+│   │   │   └── scripts
+│   │   │       ├── bandockplus_933_2449.out
+│   │   │       ├── bandockplus_933_2449.py
+│   │   │       ├── bandockplus_933_2449.slurm
+│   │   │       ├── raw_results
+│   │   │       │   └── raw_results-bandockplus_933_2449.csv
+│   │   │       └── results_analysed_named
+│   │   │           └── results_analysed_named-bandockplus_933_2449.tsv
+│   │   ├── iptm_858_2449
+│   │   │   ├── iptm_858_2449_aia.tsv
+│   │   │   └── scripts
+│   │   │       ├── iptm_858_2449.out
+│   │   │       ├── iptm_858_2449.py
+│   │   │       ├── iptm_858_2449.slurm
+│   │   │       ├── raw_results
+│   │   │       │   └── raw_results-iptm_858_2449.csv
+│   │   │       └── results_analysed_named
+│   │   │           └── results_analysed_named-iptm_858_2449.tsv
+│   │   └── iptm_933_2449
+│   │       ├── iptm_933_2449_aia.tsv
+│   │       └── scripts
+│   │           ├── iptm_933_2449.out
+│   │           ├── iptm_933_2449.py
+│   │           ├── iptm_933_2449.slurm
+│   │           ├── raw_results
+│   │           │   └── raw_results-iptm_933_2449.csv
+│   │           └── results_analysed_named
+│   │               └── results_analysed_named-iptm_933_2449.tsv
+│   ├── bandock
+│   │   ├── bandock_aia.tsv
+│   │   └── scripts
+│   │       ├── bandock.out
+│   │       ├── bandock.py
+│   │       ├── bandock.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandock.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandock.tsv
+│   ├── bandockplus
+│   │   ├── bandockplus_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus.out
+│   │       ├── bandockplus.py
+│   │       ├── bandockplus.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus.tsv
+│   ├── bandockplus_1103_2449
+│   │   ├── bandockplus_1103_2449_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_1103_2449.out
+│   │       ├── bandockplus_1103_2449.py
+│   │       ├── bandockplus_1103_2449.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_1103_2449.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_1103_2449.tsv
+│   ├── bandockplus_af2
+│   │   ├── bandockplus_af2_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_af2.out
+│   │       ├── bandockplus_af2.py
+│   │       ├── bandockplus_af2.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_af2.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_af2.tsv
+│   ├── bandockplus_all200_plddt
+│   │   ├── bandockplus_all200_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_all200_plddt.out
+│   │       ├── bandockplus_all200_plddt.py
+│   │       ├── bandockplus_all200_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_all200_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_all200_plddt.tsv
+│   ├── bandockplus_all200_res
+│   │   ├── bandockplus_all200_res_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_all200_res.out
+│   │       ├── bandockplus_all200_res.py
+│   │       ├── bandockplus_all200_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_all200_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_all200_res.tsv
+│   ├── bandockplus_bottom100_plddt
+│   │   ├── bandockplus_bottom100_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_bottom100_plddt.out
+│   │       ├── bandockplus_bottom100_plddt.py
+│   │       ├── bandockplus_bottom100_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_bottom100_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_bottom100_plddt.tsv
+│   ├── bandockplus_bottom100_res
+│   │   ├── bandockplus_bottom100_res_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_bottom100_res.out
+│   │       ├── bandockplus_bottom100_res.py
+│   │       ├── bandockplus_bottom100_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_bottom100_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_bottom100_res.tsv
+│   ├── bandockplus_random200
+│   │   ├── bandockplus_random200_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_random200.out
+│   │       ├── bandockplus_random200.py
+│   │       ├── bandockplus_random200.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_random200.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_random200.tsv
+│   ├── bandockplus_top100_plddt
+│   │   ├── bandockplus_top100_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_top100_plddt.out
+│   │       ├── bandockplus_top100_plddt.py
+│   │       ├── bandockplus_top100_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_top100_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_top100_plddt.tsv
+│   ├── bandockplus_top100_res
+│   │   ├── bandockplus_top100_res_aia.tsv
+│   │   └── scripts
+│   │       ├── bandockplus_top100_res.out
+│   │       ├── bandockplus_top100_res.py
+│   │       ├── bandockplus_top100_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-bandockplus_top100_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-bandockplus_top100_res.tsv
+│   ├── iptm_1103_2449
+│   │   ├── iptm_1103_2449_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_1103_2449.out
+│   │       ├── iptm_1103_2449.py
+│   │       ├── iptm_1103_2449.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_1103_2449.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_1103_2449.tsv
+│   ├── iptm_all200_plddt
+│   │   ├── iptm_all200_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_all200_plddt.out
+│   │       ├── iptm_all200_plddt.py
+│   │       ├── iptm_all200_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_all200_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_all200_plddt.tsv
+│   ├── iptm_all200_res
+│   │   ├── iptm_all200_res_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_all200_res.out
+│   │       ├── iptm_all200_res.py
+│   │       ├── iptm_all200_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_all200_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_all200_res.tsv
+│   ├── iptm_bottom100_plddt
+│   │   ├── iptm_bottom100_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_bottom100_plddt.out
+│   │       ├── iptm_bottom100_plddt.py
+│   │       ├── iptm_bottom100_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_bottom100_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_bottom100_plddt.tsv
+│   ├── iptm_bottom100_res
+│   │   ├── iptm_bottom100_res_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_bottom100_res.out
+│   │       ├── iptm_bottom100_res.py
+│   │       ├── iptm_bottom100_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_bottom100_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_bottom100_res.tsv
+│   ├── iptm_random200
+│   │   ├── iptm_random200_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_random200.out
+│   │       ├── iptm_random200.py
+│   │       ├── iptm_random200.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_random200.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_random200.tsv
+│   ├── iptm_top100_plddt
+│   │   ├── iptm_top100_plddt_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_top100_plddt.out
+│   │       ├── iptm_top100_plddt.py
+│   │       ├── iptm_top100_plddt.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_top100_plddt.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_top100_plddt.tsv
+│   ├── iptm_top100_res
+│   │   ├── iptm_top100_res_aia.tsv
+│   │   └── scripts
+│   │       ├── iptm_top100_res.out
+│   │       ├── iptm_top100_res.py
+│   │       ├── iptm_top100_res.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-iptm_top100_res.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-iptm_top100_res.tsv
+│   ├── random-0
+│   │   ├── random-0_aia.tsv
+│   │   └── scripts
+│   │       ├── random-0.out
+│   │       ├── random-0.py
+│   │       ├── random-0.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-random-0.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-random-0.tsv
+│   ├── random-1
+│   │   ├── random-1_aia.tsv
+│   │   └── scripts
+│   │       ├── random-1.out
+│   │       ├── random-1.py
+│   │       ├── random-1.slurm
+│   │       ├── raw_results
+│   │       │   └── raw_results-random-1.csv
+│   │       └── results_analysed_named
+│   │           └── results_analysed_named-random-1.tsv
+│   └── random-2
+│       ├── random-2_aia.tsv
+│       └── scripts
+│           ├── random-2.out
+│           ├── random-2.py
+│           ├── random-2.slurm
+│           ├── raw_results
+│           │   └── raw_results-random-2.csv
+│           └── results_analysed_named
+│               └── results_analysed_named-random-2.tsv
+├── previous1
+│   ├── matrices
+│   │   ├── _scripts
+│   │   │   ├── _filter.py
+│   │   │   ├── _matrix_slice.py
+│   │   │   ├── chain_pair_iptm.py
+│   │   │   ├── chain_pair_iptm.slurm
+│   │   │   ├── chain_pair_pae_min.py
+│   │   │   ├── chain_pair_pae_min.slurm
+│   │   │   ├── filter.sh
+│   │   │   ├── iptm.py
+│   │   │   ├── iptm.slurm
+│   │   │   ├── iptm_test.py
+│   │   │   ├── iptm_test.slurm
+│   │   │   ├── logs
+│   │   │   │   ├── chain_pair_iptm.out
+│   │   │   │   ├── chain_pair_pae_min.out
+│   │   │   │   ├── iptm.out
+│   │   │   │   ├── iptm_test.out
+│   │   │   │   ├── ptm.out
+│   │   │   │   └── ranking_score.out
+│   │   │   ├── pdb_lists
+│   │   │   │   ├── _create_pdb_lists.py
+│   │   │   │   ├── all200_plddt.csv
+│   │   │   │   ├── all200_res.csv
+│   │   │   │   ├── bottom100_plddt.csv
+│   │   │   │   ├── bottom100_res.csv
+│   │   │   │   ├── homo_sapien-metadata.xlsx
+│   │   │   │   ├── random200.csv
+│   │   │   │   ├── top100_plddt.csv
+│   │   │   │   └── top100_res.csv
+│   │   │   ├── ptm.py
+│   │   │   ├── ptm.slurm
+│   │   │   ├── ranking_score.py
+│   │   │   └── ranking_score.slurm
+│   │   ├── filtered_old
+│   │   │   ├── chain_pair_iptm_bottom100.tsv
+│   │   │   ├── chain_pair_iptm_bottom100_plddt.tsv
+│   │   │   ├── chain_pair_iptm_top100.tsv
+│   │   │   ├── chain_pair_iptm_top100_plddt.tsv
+│   │   │   ├── chain_pair_pae_min_bottom100.tsv
+│   │   │   ├── chain_pair_pae_min_bottom100_plddt.tsv
+│   │   │   ├── chain_pair_pae_min_top100.tsv
+│   │   │   ├── chain_pair_pae_min_top100_plddt.tsv
+│   │   │   ├── control_100.tsv
+│   │   │   ├── iptm_bottom100.tsv
+│   │   │   ├── iptm_bottom100_plddt.tsv
+│   │   │   ├── iptm_top100.tsv
+│   │   │   ├── iptm_top100_plddt.tsv
+│   │   │   ├── ptm_bottom100.tsv
+│   │   │   ├── ptm_bottom100_plddt.tsv
+│   │   │   ├── ptm_top100.tsv
+│   │   │   ├── ptm_top100_plddt.tsv
+│   │   │   ├── ranking_score_bottom100.tsv
+│   │   │   ├── ranking_score_bottom100_plddt.tsv
+│   │   │   ├── ranking_score_top100.tsv
+│   │   │   └── ranking_score_top100_plddt.tsv
+│   │   └── unfiltered_old
+│   │       ├── chain_pair_iptm.tsv
+│   │       ├── chain_pair_pae_min.tsv
+│   │       ├── control_total.tsv
+│   │       ├── iptm.tsv
+│   │       ├── ptm.tsv
+│   │       └── ranking_score.tsv
+│   ├── new
+│   │   ├── 0_chain_pair_iptm_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── run_canpredict.out
+│   │   │   │   ├── run_canpredict.py
+│   │   │   │   └── run_canpredict.slurm
+│   │   │   └── canpredict_compounds_n_10
+│   │   │       ├── Abdominal Pain~MESH:D015746.tsv
+│   │   │       ├── Abscess~MESH:D000038.tsv
+│   │   │       ├── Acanthamoeba Keratitis~MESH:D015823.tsv
+│   │   │       ├── Acidosis~MESH:D000138.tsv
+│   │   │       ├── Acne Vulgaris~MESH:D000152.tsv
+│   │   │       ├── Acquired Immunodeficiency Syndrome~MESH:D000163.tsv
+│   │   │       ├── Acromegaly~MESH:D000172.tsv
+│   │   │       ├── Acute Coronary Syndrome~MESH:D054058.tsv
+│   │   │       ├── Acute Kidney Injury~MESH:D058186.tsv
+│   │   │       ├── Acute Lung Injury~MESH:D055371.tsv
+│   │   │       ├── Adenocarcinoma of Lung~MESH:D000077192.tsv
+│   │   │       ├── Adenocarcinoma~MESH:D000230.tsv
+│   │   │       ├── Adenoma~MESH:D000236.tsv
+│   │   │       ├── Adenoviridae Infections~MESH:D000257.tsv
+│   │   │       ├── Adrenocortical Carcinoma~MESH:D018268.tsv
+│   │   │       ├── Affective Disorders, Psychotic~MESH:D000341.tsv
+│   │   │       ├── Agoraphobia~MESH:D000379.tsv
+│   │   │       ├── Agranulocytosis~MESH:D000380.tsv
+│   │   │       ├── AIDS Dementia Complex~MESH:D015526.tsv
+│   │   │       ├── AIDS-Related Complex~MESH:D000386.tsv
+│   │   │       ├── AIDS-Related Opportunistic Infections~MESH:D017088.tsv
+│   │   │       ├── Airway Obstruction~MESH:D000402.tsv
+│   │   │       ├── Akathisia, Drug-Induced~MESH:D017109.tsv
+│   │   │       ├── Akinetic Mutism~MESH:D000405.tsv
+│   │   │       ├── Albuminuria~MESH:D000419.tsv
+│   │   │       ├── Alcohol Withdrawal Delirium~MESH:D000430.tsv
+│   │   │       ├── Alcohol Withdrawal Seizures~MESH:D020270.tsv
+│   │   │       ├── Alcohol-Induced Disorders~MESH:D020751.tsv
+│   │   │       ├── Alcoholism~MESH:D000437.tsv
+│   │   │       ├── Alopecia Areata~MESH:D000506.tsv
+│   │   │       ├── Altitude Sickness~MESH:D000532.tsv
+│   │   │       ├── Alzheimer Disease~MESH:D000544.tsv
+│   │   │       ├── Amnesia, Anterograde~MESH:D020324.tsv
+│   │   │       ├── Amnesia~MESH:D000647.tsv
+│   │   │       ├── Amphetamine-Related Disorders~MESH:D019969.tsv
+│   │   │       ├── Amyloidosis~MESH:D000686.tsv
+│   │   │       ├── Amyotrophic Lateral Sclerosis~MESH:D000690.tsv
+│   │   │       ├── Anaphylaxis~MESH:D000707.tsv
+│   │   │       ├── Anemia, Aplastic~MESH:D000741.tsv
+│   │   │       ├── Anemia, Hemolytic, Autoimmune~MESH:D000744.tsv
+│   │   │       ├── Anemia, Hemolytic~MESH:D000743.tsv
+│   │   │       ├── Anemia, Macrocytic~MESH:D000748.tsv
+│   │   │       ├── Anemia, Refractory, with Excess of Blasts~MESH:D000754.tsv
+│   │   │       ├── Anemia, Sickle Cell~MESH:D000755.tsv
+│   │   │       ├── Anemia, Sideroblastic~MESH:D000756.tsv
+│   │   │       ├── Anemia~MESH:D000740.tsv
+│   │   │       ├── Angina Pectoris~MESH:D000787.tsv
+│   │   │       ├── Angina, Stable~MESH:D060050.tsv
+│   │   │       ├── Angioedemas, Hereditary~MESH:D054179.tsv
+│   │   │       ├── Angioedema~MESH:D000799.tsv
+│   │   │       ├── Anorexia~MESH:D000855.tsv
+│   │   │       ├── Anxiety Disorders~MESH:D001008.tsv
+│   │   │       ├── Aortic Diseases~MESH:D001018.tsv
+│   │   │       ├── Apnea~MESH:D001049.tsv
+│   │   │       ├── Arrhythmias, Cardiac~MESH:D001145.tsv
+│   │   │       ├── Arsenic Poisoning~MESH:D020261.tsv
+│   │   │       ├── Arterial Occlusive Diseases~MESH:D001157.tsv
+│   │   │       ├── Arteriosclerosis~MESH:D001161.tsv
+│   │   │       ├── Arthralgia~MESH:D018771.tsv
+│   │   │       ├── Arthritis, Experimental~MESH:D001169.tsv
+│   │   │       ├── Arthritis, Gouty~MESH:D015210.tsv
+│   │   │       ├── Arthritis, Infectious~MESH:D001170.tsv
+│   │   │       ├── Arthritis, Juvenile~MESH:D001171.tsv
+│   │   │       ├── Arthritis, Psoriatic~MESH:D015535.tsv
+│   │   │       ├── Arthritis, Rheumatoid~MESH:D001172.tsv
+│   │   │       ├── Arthritis~MESH:D001168.tsv
+│   │   │       ├── Ascites~MESH:D001201.tsv
+│   │   │       ├── Aspergillosis~MESH:D001228.tsv
+│   │   │       ├── Asthenozoospermia~MESH:D053627.tsv
+│   │   │       ├── Asthma~MESH:D001249.tsv
+│   │   │       ├── Astrocytoma~MESH:D001254.tsv
+│   │   │       ├── Ataxia~MESH:D001259.tsv
+│   │   │       ├── Atherosclerosis~MESH:D050197.tsv
+│   │   │       ├── Athetosis~MESH:D001264.tsv
+│   │   │       ├── Athletic Injuries~MESH:D001265.tsv
+│   │   │       ├── Atrial Fibrillation~MESH:D001281.tsv
+│   │   │       ├── Atrial Flutter~MESH:D001282.tsv
+│   │   │       ├── Atrioventricular Block~MESH:D054537.tsv
+│   │   │       ├── Attention Deficit Disorder with Hyperactivity~MESH:D001289.tsv
+│   │   │       ├── Autistic Disorder~MESH:D001321.tsv
+│   │   │       ├── Autoimmune Diseases~MESH:D001327.tsv
+│   │   │       ├── Autonomic Nervous System Diseases~MESH:D001342.tsv
+│   │   │       ├── Azotemia~MESH:D053099.tsv
+│   │   │       ├── Back Pain~MESH:D001416.tsv
+│   │   │       ├── Bacteremia~MESH:D016470.tsv
+│   │   │       ├── Bacterial Infections~MESH:D001424.tsv
+│   │   │       ├── Bacteriuria~MESH:D001437.tsv
+│   │   │       ├── Barrett Esophagus~MESH:D001471.tsv
+│   │   │       ├── Basal Ganglia Diseases~MESH:D001480.tsv
+│   │   │       ├── Behcet Syndrome~MESH:D001528.tsv
+│   │   │       ├── Biliary Tract Neoplasms~MESH:D001661.tsv
+│   │   │       ├── Binge-Eating Disorder~MESH:D056912.tsv
+│   │   │       ├── Bipolar Disorder~MESH:D001714.tsv
+│   │   │       ├── Blastomycosis~MESH:D001759.tsv
+│   │   │       ├── Blepharoptosis~MESH:D001763.tsv
+│   │   │       ├── Blister~MESH:D001768.tsv
+│   │   │       ├── Bone Diseases~MESH:D001847.tsv
+│   │   │       ├── Bone Marrow Neoplasms~MESH:D019046.tsv
+│   │   │       ├── Bone Neoplasms~MESH:D001859.tsv
+│   │   │       ├── Bone Resorption~MESH:D001862.tsv
+│   │   │       ├── Borderline Personality Disorder~MESH:D001883.tsv
+│   │   │       ├── Bradycardia~MESH:D001919.tsv
+│   │   │       ├── Brain Abscess~MESH:D001922.tsv
+│   │   │       ├── Brain Diseases~MESH:D001927.tsv
+│   │   │       ├── Brain Edema~MESH:D001929.tsv
+│   │   │       ├── Brain Infarction~MESH:D020520.tsv
+│   │   │       ├── Brain Injuries~MESH:D001930.tsv
+│   │   │       ├── Brain Ischemia~MESH:D002545.tsv
+│   │   │       ├── Brain Neoplasms~MESH:D001932.tsv
+│   │   │       ├── Breast Neoplasms~MESH:D001943.tsv
+│   │   │       ├── Bronchial Hyperreactivity~MESH:D016535.tsv
+│   │   │       ├── Bronchial Spasm~MESH:D001986.tsv
+│   │   │       ├── Bronchiectasis~MESH:D001987.tsv
+│   │   │       ├── Bronchitis, Chronic~MESH:D029481.tsv
+│   │   │       ├── Bronchitis~MESH:D001991.tsv
+│   │   │       ├── Bronchopneumonia~MESH:D001996.tsv
+│   │   │       ├── Bronchopulmonary Dysplasia~MESH:D001997.tsv
+│   │   │       ├── Bulimia Nervosa~MESH:D052018.tsv
+│   │   │       ├── Bulimia~MESH:D002032.tsv
+│   │   │       ├── Burkitt Lymphoma~MESH:D002051.tsv
+│   │   │       ├── Burns~MESH:D002056.tsv
+│   │   │       ├── Cachexia~MESH:D002100.tsv
+│   │   │       ├── Candidemia~MESH:D058387.tsv
+│   │   │       ├── Candidiasis, Vulvovaginal~MESH:D002181.tsv
+│   │   │       ├── Candidiasis~MESH:D002177.tsv
+│   │   │       ├── Carbamoyl-Phosphate Synthase I Deficiency Disease~MESH:D020165.tsv
+│   │   │       ├── Carbon Tetrachloride Poisoning~MESH:D002252.tsv
+│   │   │       ├── Carcinoma, Bronchogenic~MESH:D002283.tsv
+│   │   │       ├── Carcinoma, Ductal, Breast~MESH:D018270.tsv
+│   │   │       ├── Carcinoma, Ehrlich Tumor~MESH:D002286.tsv
+│   │   │       ├── Carcinoma, Embryonal~MESH:D018236.tsv
+│   │   │       ├── Carcinoma, Endometrioid~MESH:D018269.tsv
+│   │   │       ├── Carcinoma, Hepatocellular~MESH:D006528.tsv
+│   │   │       ├── Carcinoma, Large Cell~MESH:D018287.tsv
+│   │   │       ├── Carcinoma, Lewis Lung~MESH:D018827.tsv
+│   │   │       ├── Carcinoma, Non-Small-Cell Lung~MESH:D002289.tsv
+│   │   │       ├── Carcinoma, Renal Cell~MESH:D002292.tsv
+│   │   │       ├── Carcinoma, Small Cell~MESH:D018288.tsv
+│   │   │       ├── Carcinoma, Squamous Cell~MESH:D002294.tsv
+│   │   │       ├── Carcinoma, Transitional Cell~MESH:D002295.tsv
+│   │   │       ├── Carcinoma~MESH:D002277.tsv
+│   │   │       ├── Cardiac Output, Low~MESH:D002303.tsv
+│   │   │       ├── Cardiomegaly~MESH:D006332.tsv
+│   │   │       ├── Cardiomyopathies~MESH:D009202.tsv
+│   │   │       ├── Cardiomyopathy, Dilated~MESH:D002311.tsv
+│   │   │       ├── Cardiomyopathy, Hypertrophic~MESH:D002312.tsv
+│   │   │       ├── Cardiotoxicity~MESH:D066126.tsv
+│   │   │       ├── Cardiovascular Diseases~MESH:D002318.tsv
+│   │   │       ├── Catalepsy~MESH:D002375.tsv
+│   │   │       ├── Cataplexy~MESH:D002385.tsv
+│   │   │       ├── Cataract~MESH:D002386.tsv
+│   │   │       ├── Catatonia~MESH:D002389.tsv
+│   │   │       ├── Causalgia~MESH:D002422.tsv
+│   │   │       ├── Cavernous Sinus Thrombosis~MESH:D020226.tsv
+│   │   │       ├── Cell Transformation, Neoplastic~MESH:D002471.tsv
+│   │   │       ├── Cellulitis~MESH:D002481.tsv
+│   │   │       ├── Central Nervous System Diseases~MESH:D002493.tsv
+│   │   │       ├── Central Nervous System Neoplasms~MESH:D016543.tsv
+│   │   │       ├── Cerebral Hemorrhage~MESH:D002543.tsv
+│   │   │       ├── Cerebral Infarction~MESH:D002544.tsv
+│   │   │       ├── Cerebrovascular Disorders~MESH:D002561.tsv
+│   │   │       ├── Chagas Disease~MESH:D014355.tsv
+│   │   │       ├── Chemical and Drug Induced Liver Injury~MESH:D056486.tsv
+│   │   │       ├── Chest Pain~MESH:D002637.tsv
+│   │   │       ├── Child Behavior Disorders~MESH:D002653.tsv
+│   │   │       ├── Child Nutrition Disorders~MESH:D015362.tsv
+│   │   │       ├── Chlamydia Infections~MESH:D002690.tsv
+│   │   │       ├── Cholangitis, Sclerosing~MESH:D015209.tsv
+│   │   │       ├── Cholangitis~MESH:D002761.tsv
+│   │   │       ├── Cholestasis~MESH:D002779.tsv
+│   │   │       ├── Chorea~MESH:D002819.tsv
+│   │   │       ├── Chromoblastomycosis~MESH:D002862.tsv
+│   │   │       ├── Chromosome Breakage~MESH:D019457.tsv
+│   │   │       ├── Chronic Kidney Disease-Mineral and Bone Disorder~MESH:D012080.tsv
+│   │   │       ├── Churg-Strauss Syndrome~MESH:D015267.tsv
+│   │   │       ├── Ciliophora Infections~MESH:D016770.tsv
+│   │   │       ├── Cleft Lip~MESH:D002971.tsv
+│   │   │       ├── Cleft Palate~MESH:D002972.tsv
+│   │   │       ├── Clostridium Infections~MESH:D003015.tsv
+│   │   │       ├── Cluster Headache~MESH:D003027.tsv
+│   │   │       ├── Cocaine-Related Disorders~MESH:D019970.tsv
+│   │   │       ├── Cognition Disorders~MESH:D003072.tsv
+│   │   │       ├── Colitis, Ulcerative~MESH:D003093.tsv
+│   │   │       ├── Colitis~MESH:D003092.tsv
+│   │   │       ├── Colonic Neoplasms~MESH:D003110.tsv
+│   │   │       ├── Colorectal Neoplasms~MESH:D015179.tsv
+│   │   │       ├── Coma~MESH:D003128.tsv
+│   │   │       ├── Common Cold~MESH:D003139.tsv
+│   │   │       ├── Community-Acquired Infections~MESH:D017714.tsv
+│   │   │       ├── Conduct Disorder~MESH:D019955.tsv
+│   │   │       ├── Condylomata Acuminata~MESH:D003218.tsv
+│   │   │       ├── Confusion~MESH:D003221.tsv
+│   │   │       ├── Connective Tissue Diseases~MESH:D003240.tsv
+│   │   │       ├── Consciousness Disorders~MESH:D003244.tsv
+│   │   │       ├── Constipation~MESH:D003248.tsv
+│   │   │       ├── Constriction, Pathologic~MESH:D003251.tsv
+│   │   │       ├── Corneal Diseases~MESH:D003316.tsv
+│   │   │       ├── Coronary Artery Disease~MESH:D003324.tsv
+│   │   │       ├── Coronary Disease~MESH:D003327.tsv
+│   │   │       ├── Coronary Occlusion~MESH:D054059.tsv
+│   │   │       ├── Coronary Stenosis~MESH:D023921.tsv
+│   │   │       ├── Coronary Vasospasm~MESH:D003329.tsv
+│   │   │       ├── Coronavirus Infections~MESH:D018352.tsv
+│   │   │       ├── Corynebacterium Infections~MESH:D003354.tsv
+│   │   │       ├── Cough~MESH:D003371.tsv
+│   │   │       ├── COVID-19~MESH:C000657245.tsv
+│   │   │       ├── Crohn Disease~MESH:D003424.tsv
+│   │   │       ├── Cross Infection~MESH:D003428.tsv
+│   │   │       ├── Cryptococcosis~MESH:D003453.tsv
+│   │   │       ├── Cryptorchidism~MESH:D003456.tsv
+│   │   │       ├── Cushing Syndrome~MESH:D003480.tsv
+│   │   │       ├── Cystic Fibrosis~MESH:D003550.tsv
+│   │   │       ├── Cystitis~MESH:D003556.tsv
+│   │   │       ├── Cytomegalovirus Infections~MESH:D003586.tsv
+│   │   │       ├── Cytomegalovirus Retinitis~MESH:D017726.tsv
+│   │   │       ├── Delirium~MESH:D003693.tsv
+│   │   │       ├── Dementia~MESH:D003704.tsv
+│   │   │       ├── Dengue~MESH:D003715.tsv
+│   │   │       ├── Depressive Disorder, Major~MESH:D003865.tsv
+│   │   │       ├── Depressive Disorder~MESH:D003866.tsv
+│   │   │       ├── Dermatitis, Allergic Contact~MESH:D017449.tsv
+│   │   │       ├── Dermatitis, Atopic~MESH:D003876.tsv
+│   │   │       ├── Dermatitis, Irritant~MESH:D017453.tsv
+│   │   │       ├── Dermatitis~MESH:D003872.tsv
+│   │   │       ├── Dermatomycoses~MESH:D003881.tsv
+│   │   │       ├── Dermatomyositis~MESH:D003882.tsv
+│   │   │       ├── Desmoplastic Small Round Cell Tumor~MESH:D058405.tsv
+│   │   │       ├── Diabetes Complications~MESH:D048909.tsv
+│   │   │       ├── Diabetes Insipidus, Nephrogenic~MESH:D018500.tsv
+│   │   │       ├── Diabetes Insipidus~MESH:D003919.tsv
+│   │   │       ├── Diabetes Mellitus, Experimental~MESH:D003921.tsv
+│   │   │       ├── Diabetes Mellitus, Type 2~MESH:D003924.tsv
+│   │   │       ├── Diabetes Mellitus~MESH:D003920.tsv
+│   │   │       ├── Diabetic Angiopathies~MESH:D003925.tsv
+│   │   │       ├── Diabetic Cardiomyopathies~MESH:D058065.tsv
+│   │   │       ├── Diabetic Nephropathies~MESH:D003928.tsv
+│   │   │       ├── Diabetic Neuropathies~MESH:D003929.tsv
+│   │   │       ├── Diabetic Retinopathy~MESH:D003930.tsv
+│   │   │       ├── Diarrhea~MESH:D003967.tsv
+│   │   │       ├── Discitis~MESH:D015299.tsv
+│   │   │       ├── Disease Models, Animal~MESH:D004195.tsv
+│   │   │       ├── Disease Progression~MESH:D018450.tsv
+│   │   │       ├── Disorders of Excessive Somnolence~MESH:D006970.tsv
+│   │   │       ├── Disruptive, Impulse Control, and Conduct Disorders~MESH:D007174.tsv
+│   │   │       ├── Dizziness~MESH:D004244.tsv
+│   │   │       ├── Dog Diseases~MESH:D004283.tsv
+│   │   │       ├── Drug Eruptions~MESH:D003875.tsv
+│   │   │       ├── Drug Hypersensitivity~MESH:D004342.tsv
+│   │   │       ├── Drug Overdose~MESH:D062787.tsv
+│   │   │       ├── Drug-Related Side Effects and Adverse Reactions~MESH:D064420.tsv
+│   │   │       ├── Duodenal Ulcer~MESH:D004381.tsv
+│   │   │       ├── Dupuytren Contracture~MESH:D004387.tsv
+│   │   │       ├── Dysarthria~MESH:D004401.tsv
+│   │   │       ├── Dyskinesia, Drug-Induced~MESH:D004409.tsv
+│   │   │       ├── Dyskinesias~MESH:D020820.tsv
+│   │   │       ├── Dyslipidemias~MESH:D050171.tsv
+│   │   │       ├── Dysmenorrhea~MESH:D004412.tsv
+│   │   │       ├── Dyspepsia~MESH:D004415.tsv
+│   │   │       ├── Dyspnea~MESH:D004417.tsv
+│   │   │       ├── Dysthymic Disorder~MESH:D019263.tsv
+│   │   │       ├── Dystonia~MESH:D004421.tsv
+│   │   │       ├── Dystonic Disorders~MESH:D020821.tsv
+│   │   │       ├── Eclampsia~MESH:D004461.tsv
+│   │   │       ├── Eczema~MESH:D004485.tsv
+│   │   │       ├── Edema~MESH:D004487.tsv
+│   │   │       ├── Embolism and Thrombosis~MESH:D016769.tsv
+│   │   │       ├── Embolism~MESH:D004617.tsv
+│   │   │       ├── Emphysema~MESH:D004646.tsv
+│   │   │       ├── Encephalitis~MESH:D004660.tsv
+│   │   │       ├── Encephalomyelitis, Autoimmune, Experimental~MESH:D004681.tsv
+│   │   │       ├── Endocarditis, Bacterial~MESH:D004697.tsv
+│   │   │       ├── Endocarditis, Subacute Bacterial~MESH:D004698.tsv
+│   │   │       ├── Endocarditis~MESH:D004696.tsv
+│   │   │       ├── Endometrial Hyperplasia~MESH:D004714.tsv
+│   │   │       ├── Endometrial Neoplasms~MESH:D016889.tsv
+│   │   │       ├── Endometriosis~MESH:D004715.tsv
+│   │   │       ├── Endomyocardial Fibrosis~MESH:D004719.tsv
+│   │   │       ├── Endophthalmitis~MESH:D009877.tsv
+│   │   │       ├── Endotoxemia~MESH:D019446.tsv
+│   │   │       ├── Enterobacteriaceae Infections~MESH:D004756.tsv
+│   │   │       ├── Enuresis~MESH:D004775.tsv
+│   │   │       ├── Eosinophilia~MESH:D004802.tsv
+│   │   │       ├── Epilepsies, Myoclonic~MESH:D004831.tsv
+│   │   │       ├── Epilepsies, Partial~MESH:D004828.tsv
+│   │   │       ├── Epilepsy, Absence~MESH:D004832.tsv
+│   │   │       ├── Epilepsy, Complex Partial~MESH:D017029.tsv
+│   │   │       ├── Epilepsy, Generalized~MESH:D004829.tsv
+│   │   │       ├── Epilepsy, Temporal Lobe~MESH:D004833.tsv
+│   │   │       ├── Epilepsy, Tonic-Clonic~MESH:D004830.tsv
+│   │   │       ├── Epilepsy~MESH:D004827.tsv
+│   │   │       ├── Erectile Dysfunction~MESH:D007172.tsv
+│   │   │       ├── Erythema Multiforme~MESH:D004892.tsv
+│   │   │       ├── Erythema Nodosum~MESH:D004893.tsv
+│   │   │       ├── Erythema~MESH:D004890.tsv
+│   │   │       ├── Erythromelalgia~MESH:D004916.tsv
+│   │   │       ├── Escherichia coli Infections~MESH:D004927.tsv
+│   │   │       ├── Esophageal and Gastric Varices~MESH:D004932.tsv
+│   │   │       ├── Esophageal Neoplasms~MESH:D004938.tsv
+│   │   │       ├── Esophageal Squamous Cell Carcinoma~MESH:D000077277.tsv
+│   │   │       ├── Esophagitis, Peptic~MESH:D004942.tsv
+│   │   │       ├── Esophagitis~MESH:D004941.tsv
+│   │   │       ├── Essential Tremor~MESH:D020329.tsv
+│   │   │       ├── Exanthema~MESH:D005076.tsv
+│   │   │       ├── Exfoliation Syndrome~MESH:D017889.tsv
+│   │   │       ├── Extensively Drug-Resistant Tuberculosis~MESH:D054908.tsv
+│   │   │       ├── Extravasation of Diagnostic and Therapeutic Materials~MESH:D005119.tsv
+│   │   │       ├── Eye Infections, Fungal~MESH:D015821.tsv
+│   │   │       ├── Facial Dermatoses~MESH:D005148.tsv
+│   │   │       ├── Facial Pain~MESH:D005157.tsv
+│   │   │       ├── Familial Hypophosphatemic Rickets~MESH:D053098.tsv
+│   │   │       ├── Familial Testotoxicosis~MESH:C536961.tsv
+│   │   │       ├── Fanconi Syndrome~MESH:D005198.tsv
+│   │   │       ├── Fasciculation~MESH:D005207.tsv
+│   │   │       ├── Fatigue~MESH:D005221.tsv
+│   │   │       ├── Fatty Liver, Alcoholic~MESH:D005235.tsv
+│   │   │       ├── Fatty Liver~MESH:D005234.tsv
+│   │   │       ├── Fever~MESH:D005334.tsv
+│   │   │       ├── Fibromatosis, Aggressive~MESH:D018222.tsv
+│   │   │       ├── Fibromyalgia~MESH:D005356.tsv
+│   │   │       ├── Fibrosarcoma~MESH:D005354.tsv
+│   │   │       ├── Fibrosis~MESH:D005355.tsv
+│   │   │       ├── Fibrous Dysplasia of Bone~MESH:D005357.tsv
+│   │   │       ├── Fish Diseases~MESH:D005393.tsv
+│   │   │       ├── Fissure in Ano~MESH:D005401.tsv
+│   │   │       ├── Friedreich Ataxia~MESH:D005621.tsv
+│   │   │       ├── Frontotemporal Dementia~MESH:D057180.tsv
+│   │   │       ├── Fungemia~MESH:D016469.tsv
+│   │   │       ├── Gait Disorders, Neurologic~MESH:D020233.tsv
+│   │   │       ├── Gallbladder Diseases~MESH:D005705.tsv
+│   │   │       ├── Gallbladder Neoplasms~MESH:D005706.tsv
+│   │   │       ├── Gallstones~MESH:D042882.tsv
+│   │   │       ├── Gas Poisoning~MESH:D005739.tsv
+│   │   │       ├── Gastritis~MESH:D005756.tsv
+│   │   │       ├── Gastroenteritis, Transmissible, of Swine~MESH:D005761.tsv
+│   │   │       ├── Gastroenteritis~MESH:D005759.tsv
+│   │   │       ├── Gastroesophageal Reflux~MESH:D005764.tsv
+│   │   │       ├── Gastrointestinal Diseases~MESH:D005767.tsv
+│   │   │       ├── Gastrointestinal Hemorrhage~MESH:D006471.tsv
+│   │   │       ├── Gastrointestinal Neoplasms~MESH:D005770.tsv
+│   │   │       ├── Gastroparesis~MESH:D018589.tsv
+│   │   │       ├── Giant Cell Arteritis~MESH:D013700.tsv
+│   │   │       ├── Giant Cell Tumor of Bone~MESH:D018212.tsv
+│   │   │       ├── Glaucoma, Angle-Closure~MESH:D015812.tsv
+│   │   │       ├── Glaucoma, Open-Angle~MESH:D005902.tsv
+│   │   │       ├── Glaucoma~MESH:D005901.tsv
+│   │   │       ├── Glioblastoma~MESH:D005909.tsv
+│   │   │       ├── Glioma~MESH:D005910.tsv
+│   │   │       ├── Gliosarcoma~MESH:D018316.tsv
+│   │   │       ├── Gliosis~MESH:D005911.tsv
+│   │   │       ├── Glomerulonephritis, IGA~MESH:D005922.tsv
+│   │   │       ├── Glomerulonephritis, Membranoproliferative~MESH:D015432.tsv
+│   │   │       ├── Glomerulonephritis, Membranous~MESH:D015433.tsv
+│   │   │       ├── Glomerulonephritis~MESH:D005921.tsv
+│   │   │       ├── Glomerulosclerosis, Focal Segmental~MESH:D005923.tsv
+│   │   │       ├── Glucose Intolerance~MESH:D018149.tsv
+│   │   │       ├── Gonadal Dysgenesis~MESH:D006059.tsv
+│   │   │       ├── Gonorrhea~MESH:D006069.tsv
+│   │   │       ├── Gout~MESH:D006073.tsv
+│   │   │       ├── Graft vs Host Disease~MESH:D006086.tsv
+│   │   │       ├── Gram-Negative Bacterial Infections~MESH:D016905.tsv
+│   │   │       ├── Gram-Positive Bacterial Infections~MESH:D016908.tsv
+│   │   │       ├── Granulomatosis with Polyangiitis~MESH:D014890.tsv
+│   │   │       ├── Granuloma~MESH:D006099.tsv
+│   │   │       ├── Graves Ophthalmopathy~MESH:D049970.tsv
+│   │   │       ├── Haemophilus Infections~MESH:D006192.tsv
+│   │   │       ├── Hallucinations~MESH:D006212.tsv
+│   │   │       ├── Head and Neck Neoplasms~MESH:D006258.tsv
+│   │   │       ├── Headache~MESH:D006261.tsv
+│   │   │       ├── Hearing Loss, Sensorineural~MESH:D006319.tsv
+│   │   │       ├── Hearing Loss~MESH:D034381.tsv
+│   │   │       ├── Heart Arrest~MESH:D006323.tsv
+│   │   │       ├── Heart Block~MESH:D006327.tsv
+│   │   │       ├── Heart Defects, Congenital~MESH:D006330.tsv
+│   │   │       ├── Heart Diseases~MESH:D006331.tsv
+│   │   │       ├── Heart Failure~MESH:D006333.tsv
+│   │   │       ├── Heartburn~MESH:D006356.tsv
+│   │   │       ├── Heavy Metal Poisoning~MESH:D000075322.tsv
+│   │   │       ├── Helicobacter Infections~MESH:D016481.tsv
+│   │   │       ├── Hemangioma~MESH:D006391.tsv
+│   │   │       ├── Hematologic Neoplasms~MESH:D019337.tsv
+│   │   │       ├── Hematoma~MESH:D006406.tsv
+│   │   │       ├── Hematuria~MESH:D006417.tsv
+│   │   │       ├── Hemolysis~MESH:D006461.tsv
+│   │   │       ├── Hemorrhage~MESH:D006470.tsv
+│   │   │       ├── Hemorrhagic Disorders~MESH:D006474.tsv
+│   │   │       ├── Hepatic Encephalopathy~MESH:D006501.tsv
+│   │   │       ├── Hepatitis B, Chronic~MESH:D019694.tsv
+│   │   │       ├── Hepatitis B~MESH:D006509.tsv
+│   │   │       ├── Hepatitis C, Chronic~MESH:D019698.tsv
+│   │   │       ├── Hepatitis C~MESH:D006526.tsv
+│   │   │       ├── Hepatitis, Chronic~MESH:D006521.tsv
+│   │   │       ├── Hepatitis~MESH:D006505.tsv
+│   │   │       ├── Hepatolenticular Degeneration~MESH:D006527.tsv
+│   │   │       ├── Hepatomegaly~MESH:D006529.tsv
+│   │   │       ├── Hernia, Hiatal~MESH:D006551.tsv
+│   │   │       ├── Heroin Dependence~MESH:D006556.tsv
+│   │   │       ├── Herpes Genitalis~MESH:D006558.tsv
+│   │   │       ├── Herpes Simplex~MESH:D006561.tsv
+│   │   │       ├── Herpes Zoster~MESH:D006562.tsv
+│   │   │       ├── Hirsutism~MESH:D006628.tsv
+│   │   │       ├── Histiocytic Disorders, Malignant~MESH:D015620.tsv
+│   │   │       ├── Histoplasmosis~MESH:D006660.tsv
+│   │   │       ├── HIV Infections~MESH:D015658.tsv
+│   │   │       ├── HIV Seropositivity~MESH:D006679.tsv
+│   │   │       ├── HIV Wasting Syndrome~MESH:D019247.tsv
+│   │   │       ├── Hodgkin Disease~MESH:D006689.tsv
+│   │   │       ├── Hot Flashes~MESH:D019584.tsv
+│   │   │       ├── Huntington Disease~MESH:D006816.tsv
+│   │   │       ├── Hyperacusis~MESH:D012001.tsv
+│   │   │       ├── Hyperaldosteronism~MESH:D006929.tsv
+│   │   │       ├── Hyperalgesia~MESH:D006930.tsv
+│   │   │       ├── Hyperammonemia~MESH:D022124.tsv
+│   │   │       ├── Hyperandrogenism~MESH:D017588.tsv
+│   │   │       ├── Hypercalcemia~MESH:D006934.tsv
+│   │   │       ├── Hypercalciuria~MESH:D053565.tsv
+│   │   │       ├── Hypercholesterolemia~MESH:D006937.tsv
+│   │   │       ├── Hyperemesis Gravidarum~MESH:D006939.tsv
+│   │   │       ├── Hyperemia~MESH:D006940.tsv
+│   │   │       ├── Hyperglycemia~MESH:D006943.tsv
+│   │   │       ├── Hyperhidrosis~MESH:D006945.tsv
+│   │   │       ├── Hyperinsulinism~MESH:D006946.tsv
+│   │   │       ├── Hyperkalemia~MESH:D006947.tsv
+│   │   │       ├── Hyperkinesis~MESH:D006948.tsv
+│   │   │       ├── Hyperlipidemia, Familial Combined~MESH:D006950.tsv
+│   │   │       ├── Hyperlipidemias~MESH:D006949.tsv
+│   │   │       ├── Hyperlipoproteinemia Type II~MESH:D006938.tsv
+│   │   │       ├── Hyperlipoproteinemias~MESH:D006951.tsv
+│   │   │       ├── Hyperparathyroidism, Secondary~MESH:D006962.tsv
+│   │   │       ├── Hyperparathyroidism~MESH:D006961.tsv
+│   │   │       ├── Hyperplasia~MESH:D006965.tsv
+│   │   │       ├── Hyperprolactinemia~MESH:D006966.tsv
+│   │   │       ├── Hypersensitivity, Delayed~MESH:D006968.tsv
+│   │   │       ├── Hypersensitivity~MESH:D006967.tsv
+│   │   │       ├── Hypertension, Malignant~MESH:D006974.tsv
+│   │   │       ├── Hypertension, Portal~MESH:D006975.tsv
+│   │   │       ├── Hypertension, Pregnancy-Induced~MESH:D046110.tsv
+│   │   │       ├── Hypertension, Pulmonary~MESH:D006976.tsv
+│   │   │       ├── Hypertension, Renal~MESH:D006977.tsv
+│   │   │       ├── Hypertension, Renovascular~MESH:D006978.tsv
+│   │   │       ├── Hypertension~MESH:D006973.tsv
+│   │   │       ├── Hypertensive Encephalopathy~MESH:D020343.tsv
+│   │   │       ├── Hyperthyroidism~MESH:D006980.tsv
+│   │   │       ├── Hypertriglyceridemia~MESH:D015228.tsv
+│   │   │       ├── Hypertrophy, Left Ventricular~MESH:D017379.tsv
+│   │   │       ├── Hypertrophy~MESH:D006984.tsv
+│   │   │       ├── Hypervitaminosis A~MESH:D006986.tsv
+│   │   │       ├── Hypoalphalipoproteinemias~MESH:D052456.tsv
+│   │   │       ├── Hypocalcemia~MESH:D006996.tsv
+│   │   │       ├── Hypochondriasis~MESH:D006998.tsv
+│   │   │       ├── Hypogonadism~MESH:D007006.tsv
+│   │   │       ├── Hypokalemia~MESH:D007008.tsv
+│   │   │       ├── Hypokinesia~MESH:D018476.tsv
+│   │   │       ├── Hypomagnesemia primary~MESH:C537153.tsv
+│   │   │       ├── Hyponatremia~MESH:D007010.tsv
+│   │   │       ├── Hypoparathyroidism~MESH:D007011.tsv
+│   │   │       ├── Hypopituitarism~MESH:D007018.tsv
+│   │   │       ├── Hypotension, Orthostatic~MESH:D007024.tsv
+│   │   │       ├── Hypotension~MESH:D007022.tsv
+│   │   │       ├── Hypothermia~MESH:D007035.tsv
+│   │   │       ├── Hypothyroidism~MESH:D007037.tsv
+│   │   │       ├── Hypoxia~MESH:D000860.tsv
+│   │   │       ├── Ichthyosis~MESH:D007057.tsv
+│   │   │       ├── Infant, Premature, Diseases~MESH:D007235.tsv
+│   │   │       ├── Infarction, Middle Cerebral Artery~MESH:D020244.tsv
+│   │   │       ├── Infections~MESH:D007239.tsv
+│   │   │       ├── Infertility, Female~MESH:D007247.tsv
+│   │   │       ├── Infertility, Male~MESH:D007248.tsv
+│   │   │       ├── Inflammation~MESH:D007249.tsv
+│   │   │       ├── Inflammatory Bowel Diseases~MESH:D015212.tsv
+│   │   │       ├── Influenza, Human~MESH:D007251.tsv
+│   │   │       ├── Insulin Resistance~MESH:D007333.tsv
+│   │   │       ├── Intervertebral Disc Displacement~MESH:D007405.tsv
+│   │   │       ├── Intestinal Diseases~MESH:D007410.tsv
+│   │   │       ├── Intestinal Neoplasms~MESH:D007414.tsv
+│   │   │       ├── Intestinal Polyps~MESH:D007417.tsv
+│   │   │       ├── Intracranial Aneurysm~MESH:D002532.tsv
+│   │   │       ├── Intracranial Hypertension~MESH:D019586.tsv
+│   │   │       ├── Intraoperative Complications~MESH:D007431.tsv
+│   │   │       ├── Isaacs Syndrome~MESH:D020386.tsv
+│   │   │       ├── Ischemia~MESH:D007511.tsv
+│   │   │       ├── Ischemic Attack, Transient~MESH:D002546.tsv
+│   │   │       ├── Jaundice~MESH:D007565.tsv
+│   │   │       ├── Joint Diseases~MESH:D007592.tsv
+│   │   │       ├── Keratitis~MESH:D007634.tsv
+│   │   │       ├── Kidney Diseases~MESH:D007674.tsv
+│   │   │       ├── Kidney Failure, Chronic~MESH:D007676.tsv
+│   │   │       ├── Kidney Neoplasms~MESH:D007680.tsv
+│   │   │       ├── Kidney Tubular Necrosis, Acute~MESH:D007683.tsv
+│   │   │       ├── Klebsiella Infections~MESH:D007710.tsv
+│   │   │       ├── Labor Pain~MESH:D048949.tsv
+│   │   │       ├── Laryngeal Neoplasms~MESH:D007822.tsv
+│   │   │       ├── Laryngopharyngeal Reflux~MESH:D057045.tsv
+│   │   │       ├── Latent Tuberculosis~MESH:D055985.tsv
+│   │   │       ├── Lead Poisoning~MESH:D007855.tsv
+│   │   │       ├── Learning Disabilities~MESH:D007859.tsv
+│   │   │       ├── Leiomyoma~MESH:D007889.tsv
+│   │   │       ├── Leiomyosarcoma~MESH:D007890.tsv
+│   │   │       ├── Leishmaniasis, Cutaneous~MESH:D016773.tsv
+│   │   │       ├── Leishmaniasis, Visceral~MESH:D007898.tsv
+│   │   │       ├── Leishmaniasis~MESH:D007896.tsv
+│   │   │       ├── Leprosy, Lepromatous~MESH:D015440.tsv
+│   │   │       ├── Leprosy, Multibacillary~MESH:D056006.tsv
+│   │   │       ├── Leprosy~MESH:D007918.tsv
+│   │   │       ├── Lethargy~MESH:D053609.tsv
+│   │   │       ├── Leukemia L1210~MESH:D007939.tsv
+│   │   │       ├── Leukemia, Erythroblastic, Acute~MESH:D004915.tsv
+│   │   │       ├── Leukemia, Hairy Cell~MESH:D007943.tsv
+│   │   │       ├── Leukemia, Lymphocytic, Chronic, B-Cell~MESH:D015451.tsv
+│   │   │       ├── Leukemia, Lymphoid~MESH:D007945.tsv
+│   │   │       ├── Leukemia, Myelogenous, Chronic, BCR-ABL Positive~MESH:D015464.tsv
+│   │   │       ├── Leukemia, Myeloid, Acute~MESH:D015470.tsv
+│   │   │       ├── Leukemia, Myeloid~MESH:D007951.tsv
+│   │   │       ├── Leukemia, Myelomonocytic, Chronic~MESH:D015477.tsv
+│   │   │       ├── Leukemia, Plasma Cell~MESH:D007952.tsv
+│   │   │       ├── Leukemia, Promyelocytic, Acute~MESH:D015473.tsv
+│   │   │       ├── Leukemia, T-Cell~MESH:D015458.tsv
+│   │   │       ├── Leukemia~MESH:D007938.tsv
+│   │   │       ├── Leukoencephalopathies~MESH:D056784.tsv
+│   │   │       ├── Leukopenia~MESH:D007970.tsv
+│   │   │       ├── Lewy Body Disease~MESH:D020961.tsv
+│   │   │       ├── Lichen Planus~MESH:D008010.tsv
+│   │   │       ├── Limb Deformities, Congenital~MESH:D017880.tsv
+│   │   │       ├── Liposarcoma~MESH:D008080.tsv
+│   │   │       ├── Liver Abscess, Amebic~MESH:D008101.tsv
+│   │   │       ├── Liver Abscess~MESH:D008100.tsv
+│   │   │       ├── Liver Cirrhosis, Biliary~MESH:D008105.tsv
+│   │   │       ├── Liver Cirrhosis, Experimental~MESH:D008106.tsv
+│   │   │       ├── Liver Cirrhosis~MESH:D008103.tsv
+│   │   │       ├── Liver Diseases~MESH:D008107.tsv
+│   │   │       ├── Liver Failure, Acute~MESH:D017114.tsv
+│   │   │       ├── Liver Neoplasms, Experimental~MESH:D008114.tsv
+│   │   │       ├── Liver Neoplasms~MESH:D008113.tsv
+│   │   │       ├── Long QT Syndrome~MESH:D008133.tsv
+│   │   │       ├── Low Back Pain~MESH:D017116.tsv
+│   │   │       ├── Lung Diseases, Fungal~MESH:D008172.tsv
+│   │   │       ├── Lung Diseases, Interstitial~MESH:D017563.tsv
+│   │   │       ├── Lung Diseases, Obstructive~MESH:D008173.tsv
+│   │   │       ├── Lung Diseases~MESH:D008171.tsv
+│   │   │       ├── Lung Injury~MESH:D055370.tsv
+│   │   │       ├── Lung Neoplasms~MESH:D008175.tsv
+│   │   │       ├── Lupus Erythematosus, Cutaneous~MESH:D008178.tsv
+│   │   │       ├── Lupus Erythematosus, Discoid~MESH:D008179.tsv
+│   │   │       ├── Lupus Erythematosus, Systemic~MESH:D008180.tsv
+│   │   │       ├── Lupus Nephritis~MESH:D008181.tsv
+│   │   │       ├── Lymphatic Metastasis~MESH:D008207.tsv
+│   │   │       ├── Lymphoma, B-Cell~MESH:D016393.tsv
+│   │   │       ├── Lymphoma, Large B-Cell, Diffuse~MESH:D016403.tsv
+│   │   │       ├── Lymphoma, Mantle-Cell~MESH:D020522.tsv
+│   │   │       ├── Lymphoma, Non-Hodgkin~MESH:D008228.tsv
+│   │   │       ├── Lymphoma, T-Cell, Cutaneous~MESH:D016410.tsv
+│   │   │       ├── Lymphoma, T-Cell, Peripheral~MESH:D016411.tsv
+│   │   │       ├── Lymphoma, T-Cell~MESH:D016399.tsv
+│   │   │       ├── Lymphoma~MESH:D008223.tsv
+│   │   │       ├── Lymphoproliferative Disorders~MESH:D008232.tsv
+│   │   │       ├── Malaria, Falciparum~MESH:D016778.tsv
+│   │   │       ├── Malaria, Vivax~MESH:D016780.tsv
+│   │   │       ├── Malaria~MESH:D008288.tsv
+│   │   │       ├── Mammary Neoplasms, Experimental~MESH:D008325.tsv
+│   │   │       ├── Marfan Syndrome~MESH:D008382.tsv
+│   │   │       ├── Medulloblastoma~MESH:D008527.tsv
+│   │   │       ├── Melanoma, Experimental~MESH:D008546.tsv
+│   │   │       ├── Melanoma~MESH:D008545.tsv
+│   │   │       ├── Memory Disorders~MESH:D008569.tsv
+│   │   │       ├── Meniere Disease~MESH:D008575.tsv
+│   │   │       ├── Meningeal Carcinomatosis~MESH:D055756.tsv
+│   │   │       ├── Meningitis, Aseptic~MESH:D008582.tsv
+│   │   │       ├── Meningitis, Bacterial~MESH:D016920.tsv
+│   │   │       ├── Meningitis, Cryptococcal~MESH:D016919.tsv
+│   │   │       ├── Meningitis, Haemophilus~MESH:D008583.tsv
+│   │   │       ├── Meningitis, Meningococcal~MESH:D008585.tsv
+│   │   │       ├── Meningitis, Pneumococcal~MESH:D008586.tsv
+│   │   │       ├── Meningitis~MESH:D008581.tsv
+│   │   │       ├── Meningoencephalitis~MESH:D008590.tsv
+│   │   │       ├── Menorrhagia~MESH:D008595.tsv
+│   │   │       ├── Mental Disorders~MESH:D001523.tsv
+│   │   │       ├── Mercury Poisoning, Nervous System~MESH:D020262.tsv
+│   │   │       ├── Mercury Poisoning~MESH:D008630.tsv
+│   │   │       ├── Mesothelioma~MESH:D008654.tsv
+│   │   │       ├── Metabolic Diseases~MESH:D008659.tsv
+│   │   │       ├── Metabolic Syndrome~MESH:D024821.tsv
+│   │   │       ├── Methemoglobinemia~MESH:D008708.tsv
+│   │   │       ├── Metrorrhagia~MESH:D008796.tsv
+│   │   │       ├── Micronuclei, Chromosome-Defective~MESH:D048629.tsv
+│   │   │       ├── Microscopic Polyangiitis~MESH:D055953.tsv
+│   │   │       ├── Migraine Disorders~MESH:D008881.tsv
+│   │   │       ├── Migraine with Aura~MESH:D020325.tsv
+│   │   │       ├── Migraine without Aura~MESH:D020326.tsv
+│   │   │       ├── Miosis~MESH:D015877.tsv
+│   │   │       ├── Mitochondrial Diseases~MESH:D028361.tsv
+│   │   │       ├── Mobility Limitation~MESH:D051346.tsv
+│   │   │       ├── Mononeuropathies~MESH:D020422.tsv
+│   │   │       ├── Mood Disorders~MESH:D019964.tsv
+│   │   │       ├── Moraxellaceae Infections~MESH:D045828.tsv
+│   │   │       ├── Morphine Dependence~MESH:D009021.tsv
+│   │   │       ├── Motor Disorders~MESH:D000068079.tsv
+│   │   │       ├── Motor Skills Disorders~MESH:D019957.tsv
+│   │   │       ├── Mouth Neoplasms~MESH:D009062.tsv
+│   │   │       ├── Movement Disorders~MESH:D009069.tsv
+│   │   │       ├── Mucocutaneous Lymph Node Syndrome~MESH:D009080.tsv
+│   │   │       ├── Mucositis~MESH:D052016.tsv
+│   │   │       ├── Multiple Myeloma~MESH:D009101.tsv
+│   │   │       ├── Multiple Sclerosis, Chronic Progressive~MESH:D020528.tsv
+│   │   │       ├── Multiple Sclerosis, Relapsing-Remitting~MESH:D020529.tsv
+│   │   │       ├── Multiple Sclerosis~MESH:D009103.tsv
+│   │   │       ├── Muscle Cramp~MESH:D009120.tsv
+│   │   │       ├── Muscle Hypertonia~MESH:D009122.tsv
+│   │   │       ├── Muscle Rigidity~MESH:D009127.tsv
+│   │   │       ├── Muscle Spasticity~MESH:D009128.tsv
+│   │   │       ├── Muscle Weakness~MESH:D018908.tsv
+│   │   │       ├── Muscular Diseases~MESH:D009135.tsv
+│   │   │       ├── Musculoskeletal Diseases~MESH:D009140.tsv
+│   │   │       ├── Myasthenia Gravis~MESH:D009157.tsv
+│   │   │       ├── Mycetoma~MESH:D008271.tsv
+│   │   │       ├── Mycobacterium Infections~MESH:D009164.tsv
+│   │   │       ├── Mycoplasma Infections~MESH:D009175.tsv
+│   │   │       ├── Mycoses~MESH:D009181.tsv
+│   │   │       ├── Mycosis Fungoides~MESH:D009182.tsv
+│   │   │       ├── Mydriasis~MESH:D015878.tsv
+│   │   │       ├── Myelodysplastic Syndromes~MESH:D009190.tsv
+│   │   │       ├── Myeloproliferative Disorders~MESH:D009196.tsv
+│   │   │       ├── Myocardial Infarction~MESH:D009203.tsv
+│   │   │       ├── Myocardial Ischemia~MESH:D017202.tsv
+│   │   │       ├── Myocardial Reperfusion Injury~MESH:D015428.tsv
+│   │   │       ├── Myocarditis~MESH:D009205.tsv
+│   │   │       ├── Myoclonic Epilepsies, Progressive~MESH:D020191.tsv
+│   │   │       ├── Myoclonus~MESH:D009207.tsv
+│   │   │       ├── Myositis~MESH:D009220.tsv
+│   │   │       ├── Myotonic Dystrophy~MESH:D009223.tsv
+│   │   │       ├── Narcolepsy~MESH:D009290.tsv
+│   │   │       ├── Nasal Obstruction~MESH:D015508.tsv
+│   │   │       ├── Nausea~MESH:D009325.tsv
+│   │   │       ├── Neck Pain~MESH:D019547.tsv
+│   │   │       ├── Necrosis~MESH:D009336.tsv
+│   │   │       ├── Neisseriaceae Infections~MESH:D016870.tsv
+│   │   │       ├── Neointima~MESH:D058426.tsv
+│   │   │       ├── Neoplasm Invasiveness~MESH:D009361.tsv
+│   │   │       ├── Neoplasm Metastasis~MESH:D009362.tsv
+│   │   │       ├── Neoplasms, Experimental~MESH:D009374.tsv
+│   │   │       ├── Neoplasms, Germ Cell and Embryonal~MESH:D009373.tsv
+│   │   │       ├── Neoplasms, Hormone-Dependent~MESH:D009376.tsv
+│   │   │       ├── Neoplasms, Unknown Primary~MESH:D009382.tsv
+│   │   │       ├── Neoplasms~MESH:D009369.tsv
+│   │   │       ├── Neovascularization, Pathologic~MESH:D009389.tsv
+│   │   │       ├── Nephritis, Interstitial~MESH:D009395.tsv
+│   │   │       ├── Nephritis~MESH:D009393.tsv
+│   │   │       ├── Nephrocalcinosis~MESH:D009397.tsv
+│   │   │       ├── Nephrosclerosis~MESH:D009400.tsv
+│   │   │       ├── Nephrosis, Lipoid~MESH:D009402.tsv
+│   │   │       ├── Nephrosis~MESH:D009401.tsv
+│   │   │       ├── Nephrotic Syndrome~MESH:D009404.tsv
+│   │   │       ├── Nerve Degeneration~MESH:D009410.tsv
+│   │   │       ├── Nervous System Diseases~MESH:D009422.tsv
+│   │   │       ├── Neuralgia, Postherpetic~MESH:D051474.tsv
+│   │   │       ├── Neuralgia~MESH:D009437.tsv
+│   │   │       ├── Neurilemmoma~MESH:D009442.tsv
+│   │   │       ├── Neurobehavioral Manifestations~MESH:D019954.tsv
+│   │   │       ├── Neuroblastoma~MESH:D009447.tsv
+│   │   │       ├── Neurocysticercosis~MESH:D020019.tsv
+│   │   │       ├── Neurodegenerative Diseases~MESH:D019636.tsv
+│   │   │       ├── Neuroectodermal Tumors, Primitive, Peripheral~MESH:D018241.tsv
+│   │   │       ├── Neuroendocrine Tumors~MESH:D018358.tsv
+│   │   │       ├── Neurogenic Inflammation~MESH:D020078.tsv
+│   │   │       ├── Neuroleptic Malignant Syndrome~MESH:D009459.tsv
+│   │   │       ├── Neurologic Manifestations~MESH:D009461.tsv
+│   │   │       ├── Neuromuscular Diseases~MESH:D009468.tsv
+│   │   │       ├── Neurotoxicity Syndromes~MESH:D020258.tsv
+│   │   │       ├── Neutropenia~MESH:D009503.tsv
+│   │   │       ├── Neutrophil Chemotactic Response, Abnormal~MESH:C563515.tsv
+│   │   │       ├── Nociceptive Pain~MESH:D059226.tsv
+│   │   │       ├── Nocturia~MESH:D053158.tsv
+│   │   │       ├── Nocturnal Enuresis~MESH:D053206.tsv
+│   │   │       ├── Non-alcoholic Fatty Liver Disease~MESH:D065626.tsv
+│   │   │       ├── Nonseminomatous germ cell tumor~MESH:C537844.tsv
+│   │   │       ├── Nystagmus, Pathologic~MESH:D009759.tsv
+│   │   │       ├── Obesity~MESH:D009765.tsv
+│   │   │       ├── Obsessive-Compulsive Disorder~MESH:D009771.tsv
+│   │   │       ├── Obstetric Labor, Premature~MESH:D007752.tsv
+│   │   │       ├── Ocular Hypertension~MESH:D009798.tsv
+│   │   │       ├── Ocular Hypotension~MESH:D015814.tsv
+│   │   │       ├── Ocular Motility Disorders~MESH:D015835.tsv
+│   │   │       ├── Olfaction Disorders~MESH:D000857.tsv
+│   │   │       ├── Oligodendroglioma~MESH:D009837.tsv
+│   │   │       ├── Oligospermia~MESH:D009845.tsv
+│   │   │       ├── Onychomycosis~MESH:D014009.tsv
+│   │   │       ├── Opioid-Related Disorders~MESH:D009293.tsv
+│   │   │       ├── Optic Nerve Diseases~MESH:D009901.tsv
+│   │   │       ├── Optic Neuritis~MESH:D009902.tsv
+│   │   │       ├── Oral Ulcer~MESH:D019226.tsv
+│   │   │       ├── Organophosphate Poisoning~MESH:D062025.tsv
+│   │   │       ├── Orthomyxoviridae Infections~MESH:D009976.tsv
+│   │   │       ├── Osteoarthritis, Hip~MESH:D015207.tsv
+│   │   │       ├── Osteoarthritis, Knee~MESH:D020370.tsv
+│   │   │       ├── Osteoarthritis~MESH:D010003.tsv
+│   │   │       ├── Osteolysis~MESH:D010014.tsv
+│   │   │       ├── Osteomalacia~MESH:D010018.tsv
+│   │   │       ├── Osteomyelitis~MESH:D010019.tsv
+│   │   │       ├── Osteoporosis, Postmenopausal~MESH:D015663.tsv
+│   │   │       ├── Osteoporosis~MESH:D010024.tsv
+│   │   │       ├── Osteoporotic Fractures~MESH:D058866.tsv
+│   │   │       ├── Osteosarcoma~MESH:D012516.tsv
+│   │   │       ├── Otitis Media~MESH:D010033.tsv
+│   │   │       ├── Otomycosis~MESH:D059249.tsv
+│   │   │       ├── Ovarian Neoplasms~MESH:D010051.tsv
+│   │   │       ├── Pain, Intractable~MESH:D010148.tsv
+│   │   │       ├── Pain, Postoperative~MESH:D010149.tsv
+│   │   │       ├── Pain~MESH:D010146.tsv
+│   │   │       ├── Pancreatic Neoplasms~MESH:D010190.tsv
+│   │   │       ├── Pancreatitis~MESH:D010195.tsv
+│   │   │       ├── Pancytopenia~MESH:D010198.tsv
+│   │   │       ├── Panic Disorder~MESH:D016584.tsv
+│   │   │       ├── Panniculitis, Lupus Erythematosus~MESH:D015435.tsv
+│   │   │       ├── Paralysis~MESH:D010243.tsv
+│   │   │       ├── Paranoid Disorders~MESH:D010259.tsv
+│   │   │       ├── Paraphilic Disorders~MESH:D010262.tsv
+│   │   │       ├── Paresis~MESH:D010291.tsv
+│   │   │       ├── Paresthesia~MESH:D010292.tsv
+│   │   │       ├── Parkinson Disease, Secondary~MESH:D010302.tsv
+│   │   │       ├── Parkinson Disease~MESH:D010300.tsv
+│   │   │       ├── Parkinsonian Disorders~MESH:D020734.tsv
+│   │   │       ├── Parotid Neoplasms~MESH:D010307.tsv
+│   │   │       ├── Pelvic Inflammatory Disease~MESH:D000292.tsv
+│   │   │       ├── Pemphigoid, Bullous~MESH:D010391.tsv
+│   │   │       ├── Pemphigus~MESH:D010392.tsv
+│   │   │       ├── Penile Diseases~MESH:D010409.tsv
+│   │   │       ├── Peptic Ulcer Hemorrhage~MESH:D010438.tsv
+│   │   │       ├── Peptic Ulcer~MESH:D010437.tsv
+│   │   │       ├── Pericarditis~MESH:D010493.tsv
+│   │   │       ├── Periodontitis~MESH:D010518.tsv
+│   │   │       ├── Peripheral Nervous System Diseases~MESH:D010523.tsv
+│   │   │       ├── Peripheral Vascular Diseases~MESH:D016491.tsv
+│   │   │       ├── Peritonitis~MESH:D010538.tsv
+│   │   │       ├── Personality Disorders~MESH:D010554.tsv
+│   │   │       ├── Pharyngitis~MESH:D010612.tsv
+│   │   │       ├── Pheochromocytoma~MESH:D010673.tsv
+│   │   │       ├── Phlebitis~MESH:D010689.tsv
+│   │   │       ├── Photophobia~MESH:D020795.tsv
+│   │   │       ├── Pituitary Neoplasms~MESH:D010911.tsv
+│   │   │       ├── Plague~MESH:D010930.tsv
+│   │   │       ├── Plaque, Atherosclerotic~MESH:D058226.tsv
+│   │   │       ├── Pleural Effusion~MESH:D010996.tsv
+│   │   │       ├── Pneumococcal Infections~MESH:D011008.tsv
+│   │   │       ├── Pneumonia, Aspiration~MESH:D011015.tsv
+│   │   │       ├── Pneumonia, Bacterial~MESH:D018410.tsv
+│   │   │       ├── Pneumonia, Pneumococcal~MESH:D011018.tsv
+│   │   │       ├── Pneumonia, Pneumocystis~MESH:D011020.tsv
+│   │   │       ├── Pneumonia, Staphylococcal~MESH:D011023.tsv
+│   │   │       ├── Pneumonia~MESH:D011014.tsv
+│   │   │       ├── Poisoning~MESH:D011041.tsv
+│   │   │       ├── Polyarteritis Nodosa~MESH:D010488.tsv
+│   │   │       ├── Polycystic Ovary Syndrome~MESH:D011085.tsv
+│   │   │       ├── Polycythemia Vera~MESH:D011087.tsv
+│   │   │       ├── Polyhydramnios~MESH:D006831.tsv
+│   │   │       ├── Polymyositis~MESH:D017285.tsv
+│   │   │       ├── Polyneuropathies~MESH:D011115.tsv
+│   │   │       ├── Polyuria~MESH:D011141.tsv
+│   │   │       ├── Postoperative Complications~MESH:D011183.tsv
+│   │   │       ├── Postoperative Hemorrhage~MESH:D019106.tsv
+│   │   │       ├── Postoperative Nausea and Vomiting~MESH:D020250.tsv
+│   │   │       ├── Postpartum Hemorrhage~MESH:D006473.tsv
+│   │   │       ├── Pre-Eclampsia~MESH:D011225.tsv
+│   │   │       ├── Precancerous Conditions~MESH:D011230.tsv
+│   │   │       ├── Precursor B-Cell Lymphoblastic Leukemia-Lymphoma~MESH:D015452.tsv
+│   │   │       ├── Precursor Cell Lymphoblastic Leukemia-Lymphoma~MESH:D054198.tsv
+│   │   │       ├── Precursor T-Cell Lymphoblastic Leukemia-Lymphoma~MESH:D054218.tsv
+│   │   │       ├── Pregnancy Complications, Infectious~MESH:D011251.tsv
+│   │   │       ├── Pregnancy, Prolonged~MESH:D011273.tsv
+│   │   │       ├── Premature Birth~MESH:D047928.tsv
+│   │   │       ├── Premenstrual Syndrome~MESH:D011293.tsv
+│   │   │       ├── Prenatal Exposure Delayed Effects~MESH:D011297.tsv
+│   │   │       ├── Priapism~MESH:D011317.tsv
+│   │   │       ├── Primary Myelofibrosis~MESH:D055728.tsv
+│   │   │       ├── Prion Diseases~MESH:D017096.tsv
+│   │   │       ├── Prolactinoma~MESH:D015175.tsv
+│   │   │       ├── Prostatic Diseases~MESH:D011469.tsv
+│   │   │       ├── Prostatic Hyperplasia~MESH:D011470.tsv
+│   │   │       ├── Prostatic Neoplasms, Castration-Resistant~MESH:D064129.tsv
+│   │   │       ├── Prostatic Neoplasms~MESH:D011471.tsv
+│   │   │       ├── Prostatism~MESH:D053448.tsv
+│   │   │       ├── Proteinuria~MESH:D011507.tsv
+│   │   │       ├── Proteus Infections~MESH:D011512.tsv
+│   │   │       ├── Pruritus~MESH:D011537.tsv
+│   │   │       ├── Pseudomonas Infections~MESH:D011552.tsv
+│   │   │       ├── Pseudotumor Cerebri~MESH:D011559.tsv
+│   │   │       ├── Psoriasis~MESH:D011565.tsv
+│   │   │       ├── Psychomotor Agitation~MESH:D011595.tsv
+│   │   │       ├── Psychomotor Disorders~MESH:D011596.tsv
+│   │   │       ├── Psychoses, Substance-Induced~MESH:D011605.tsv
+│   │   │       ├── Psychotic Disorders~MESH:D011618.tsv
+│   │   │       ├── Puerperal Disorders~MESH:D011644.tsv
+│   │   │       ├── Pulmonary Atresia~MESH:D018633.tsv
+│   │   │       ├── Pulmonary Disease, Chronic Obstructive~MESH:D029424.tsv
+│   │   │       ├── Pulmonary Edema~MESH:D011654.tsv
+│   │   │       ├── Pulmonary Embolism~MESH:D011655.tsv
+│   │   │       ├── Pulmonary Eosinophilia~MESH:D011657.tsv
+│   │   │       ├── Pulmonary Fibrosis~MESH:D011658.tsv
+│   │   │       ├── Purpura, Thrombocytopenic, Idiopathic~MESH:D016553.tsv
+│   │   │       ├── Pyelonephritis~MESH:D011704.tsv
+│   │   │       ├── Pyomyositis~MESH:D052880.tsv
+│   │   │       ├── Pyuria~MESH:D011776.tsv
+│   │   │       ├── Radiation Injuries~MESH:D011832.tsv
+│   │   │       ├── Raynaud Disease~MESH:D011928.tsv
+│   │   │       ├── Rectal Diseases~MESH:D012002.tsv
+│   │   │       ├── Recurrence~MESH:D012008.tsv
+│   │   │       ├── Reflex Sympathetic Dystrophy~MESH:D012019.tsv
+│   │   │       ├── REM Sleep Behavior Disorder~MESH:D020187.tsv
+│   │   │       ├── Renal Insufficiency~MESH:D051437.tsv
+│   │   │       ├── Reperfusion Injury~MESH:D015427.tsv
+│   │   │       ├── Respiratory Distress Syndrome, Adult~MESH:D012128.tsv
+│   │   │       ├── Respiratory Distress Syndrome, Newborn~MESH:D012127.tsv
+│   │   │       ├── Respiratory Insufficiency~MESH:D012131.tsv
+│   │   │       ├── Respiratory Tract Infections~MESH:D012141.tsv
+│   │   │       ├── Restless Legs Syndrome~MESH:D012148.tsv
+│   │   │       ├── Retinal Necrosis Syndrome, Acute~MESH:D015882.tsv
+│   │   │       ├── Retinoblastoma~MESH:D012175.tsv
+│   │   │       ├── Rhabdomyosarcoma~MESH:D012208.tsv
+│   │   │       ├── Rheumatic Diseases~MESH:D012216.tsv
+│   │   │       ├── Rhinitis, Allergic, Perennial~MESH:D012221.tsv
+│   │   │       ├── Rhinitis, Allergic, Seasonal~MESH:D006255.tsv
+│   │   │       ├── Rhinitis, Allergic~MESH:D065631.tsv
+│   │   │       ├── Rhinitis~MESH:D012220.tsv
+│   │   │       ├── Rickets~MESH:D012279.tsv
+│   │   │       ├── Rosacea~MESH:D012393.tsv
+│   │   │       ├── Salmonella Infections, Animal~MESH:D012481.tsv
+│   │   │       ├── Salmonella Infections~MESH:D012480.tsv
+│   │   │       ├── Salpingitis~MESH:D012488.tsv
+│   │   │       ├── Sarcoidosis~MESH:D012507.tsv
+│   │   │       ├── Sarcoma, Ewing~MESH:D012512.tsv
+│   │   │       ├── Sarcoma, Experimental~MESH:D012513.tsv
+│   │   │       ├── Sarcoma, Kaposi~MESH:D012514.tsv
+│   │   │       ├── Sarcoma, Synovial~MESH:D013584.tsv
+│   │   │       ├── Sarcoma~MESH:D012509.tsv
+│   │   │       ├── Schizophrenia Spectrum and Other Psychotic Disorders~MESH:D019967.tsv
+│   │   │       ├── Schizophrenia, Catatonic~MESH:D012560.tsv
+│   │   │       ├── Schizophrenia, Paranoid~MESH:D012563.tsv
+│   │   │       ├── Schizophrenia~MESH:D012559.tsv
+│   │   │       ├── Schizotypal Personality Disorder~MESH:D012569.tsv
+│   │   │       ├── Sciatica~MESH:D012585.tsv
+│   │   │       ├── Scleroderma, Diffuse~MESH:D045743.tsv
+│   │   │       ├── Scleroderma, Systemic~MESH:D012595.tsv
+│   │   │       ├── Seizures, Febrile~MESH:D003294.tsv
+│   │   │       ├── Seizures~MESH:D012640.tsv
+│   │   │       ├── Sepsis~MESH:D018805.tsv
+│   │   │       ├── Serotonin Syndrome~MESH:D020230.tsv
+│   │   │       ├── Serratia Infections~MESH:D016868.tsv
+│   │   │       ├── Sexual Dysfunction, Physiological~MESH:D012735.tsv
+│   │   │       ├── Sexual Dysfunctions, Psychological~MESH:D020018.tsv
+│   │   │       ├── Shock, Cardiogenic~MESH:D012770.tsv
+│   │   │       ├── Shock, Hemorrhagic~MESH:D012771.tsv
+│   │   │       ├── Shock, Septic~MESH:D012772.tsv
+│   │   │       ├── Shock~MESH:D012769.tsv
+│   │   │       ├── Sialorrhea~MESH:D012798.tsv
+│   │   │       ├── Sick Sinus Syndrome~MESH:D012804.tsv
+│   │   │       ├── Sigmoid Neoplasms~MESH:D012811.tsv
+│   │   │       ├── Sinusitis~MESH:D012852.tsv
+│   │   │       ├── Sjogren's Syndrome~MESH:D012859.tsv
+│   │   │       ├── Skin Abnormalities~MESH:D012868.tsv
+│   │   │       ├── Skin Diseases, Bacterial~MESH:D017192.tsv
+│   │   │       ├── Skin Diseases, Infectious~MESH:D012874.tsv
+│   │   │       ├── Skin Diseases~MESH:D012871.tsv
+│   │   │       ├── Skin Neoplasms~MESH:D012878.tsv
+│   │   │       ├── Sleep Apnea, Obstructive~MESH:D020181.tsv
+│   │   │       ├── Sleep Initiation and Maintenance Disorders~MESH:D007319.tsv
+│   │   │       ├── Sleep Wake Disorders~MESH:D012893.tsv
+│   │   │       ├── Small Cell Lung Carcinoma~MESH:D055752.tsv
+│   │   │       ├── Sneezing~MESH:D012912.tsv
+│   │   │       ├── Soft Tissue Neoplasms~MESH:D012983.tsv
+│   │   │       ├── Spasms, Infantile~MESH:D013036.tsv
+│   │   │       ├── Spasm~MESH:D013035.tsv
+│   │   │       ├── Speech Disorders~MESH:D013064.tsv
+│   │   │       ├── Sphincter of Oddi Dysfunction~MESH:D046628.tsv
+│   │   │       ├── Spinal Cord Injuries~MESH:D013119.tsv
+│   │   │       ├── Splenomegaly~MESH:D013163.tsv
+│   │   │       ├── Spondylitis, Ankylosing~MESH:D013167.tsv
+│   │   │       ├── Spondylosis~MESH:D055009.tsv
+│   │   │       ├── Squamous Cell Carcinoma of Head and Neck~MESH:D000077195.tsv
+│   │   │       ├── Staphylococcal Infections~MESH:D013203.tsv
+│   │   │       ├── Staphylococcal Skin Infections~MESH:D013207.tsv
+│   │   │       ├── Status Asthmaticus~MESH:D013224.tsv
+│   │   │       ├── Status Epilepticus~MESH:D013226.tsv
+│   │   │       ├── Stereotypic Movement Disorder~MESH:D019956.tsv
+│   │   │       ├── Stomach Diseases~MESH:D013272.tsv
+│   │   │       ├── Stomach Neoplasms~MESH:D013274.tsv
+│   │   │       ├── Stomach Ulcer~MESH:D013276.tsv
+│   │   │       ├── Stomatitis, Aphthous~MESH:D013281.tsv
+│   │   │       ├── Streptococcal Infections~MESH:D013290.tsv
+│   │   │       ├── Stress Disorders, Post-Traumatic~MESH:D013313.tsv
+│   │   │       ├── Stroke~MESH:D020521.tsv
+│   │   │       ├── Stupor~MESH:D053608.tsv
+│   │   │       ├── Subarachnoid Hemorrhage~MESH:D013345.tsv
+│   │   │       ├── Substance Withdrawal Syndrome~MESH:D013375.tsv
+│   │   │       ├── Substance-Related Disorders~MESH:D019966.tsv
+│   │   │       ├── Surgical Wound Infection~MESH:D013530.tsv
+│   │   │       ├── Syncope~MESH:D013575.tsv
+│   │   │       ├── Synovitis~MESH:D013585.tsv
+│   │   │       ├── Systemic candidiasis~MESH:C536777.tsv
+│   │   │       ├── Tachycardia, Paroxysmal~MESH:D013614.tsv
+│   │   │       ├── Tachycardia, Sinus~MESH:D013616.tsv
+│   │   │       ├── Tachycardia, Supraventricular~MESH:D013617.tsv
+│   │   │       ├── Tachycardia, Ventricular~MESH:D017180.tsv
+│   │   │       ├── Tachycardia~MESH:D013610.tsv
+│   │   │       ├── Temporomandibular Joint Disorders~MESH:D013705.tsv
+│   │   │       ├── Tension-Type Headache~MESH:D018781.tsv
+│   │   │       ├── Testicular Diseases~MESH:D013733.tsv
+│   │   │       ├── Testicular Neoplasms~MESH:D013736.tsv
+│   │   │       ├── Tetanus~MESH:D013742.tsv
+│   │   │       ├── Tetany~MESH:D013746.tsv
+│   │   │       ├── Thrombocythemia, Essential~MESH:D013920.tsv
+│   │   │       ├── Thrombocytopenia~MESH:D013921.tsv
+│   │   │       ├── Thromboembolism~MESH:D013923.tsv
+│   │   │       ├── Thrombophlebitis~MESH:D013924.tsv
+│   │   │       ├── Thrombosis~MESH:D013927.tsv
+│   │   │       ├── Thyroid Neoplasms~MESH:D013964.tsv
+│   │   │       ├── Thyrotoxicosis~MESH:D013971.tsv
+│   │   │       ├── Tic Disorders~MESH:D013981.tsv
+│   │   │       ├── Tics~MESH:D020323.tsv
+│   │   │       ├── Tinea Capitis~MESH:D014006.tsv
+│   │   │       ├── Tinea~MESH:D014005.tsv
+│   │   │       ├── Tinnitus~MESH:D014012.tsv
+│   │   │       ├── Tobacco Use Disorder~MESH:D014029.tsv
+│   │   │       ├── Tongue Neoplasms~MESH:D014062.tsv
+│   │   │       ├── Tonsillar Neoplasms~MESH:D014067.tsv
+│   │   │       ├── Tonsillitis~MESH:D014069.tsv
+│   │   │       ├── Torsades de Pointes~MESH:D016171.tsv
+│   │   │       ├── Torticollis~MESH:D014103.tsv
+│   │   │       ├── Tourette Syndrome~MESH:D005879.tsv
+│   │   │       ├── Toxoplasmosis~MESH:D014123.tsv
+│   │   │       ├── Tremor~MESH:D014202.tsv
+│   │   │       ├── Trigeminal Neuralgia~MESH:D014277.tsv
+│   │   │       ├── Trypanosomiasis, African~MESH:D014353.tsv
+│   │   │       ├── Tuberculosis, Multidrug-Resistant~MESH:D018088.tsv
+│   │   │       ├── Tuberculosis, Pulmonary~MESH:D014397.tsv
+│   │   │       ├── Tuberculosis~MESH:D014376.tsv
+│   │   │       ├── Tuberous Sclerosis~MESH:D014402.tsv
+│   │   │       ├── Ulcer~MESH:D014456.tsv
+│   │   │       ├── Unconsciousness~MESH:D014474.tsv
+│   │   │       ├── Unverricht-Lundborg Syndrome~MESH:D020194.tsv
+│   │   │       ├── Uremia~MESH:D014511.tsv
+│   │   │       ├── Urethritis~MESH:D014526.tsv
+│   │   │       ├── Urinary Bladder Diseases~MESH:D001745.tsv
+│   │   │       ├── Urinary Bladder Neoplasms~MESH:D001749.tsv
+│   │   │       ├── Urinary Bladder, Overactive~MESH:D053201.tsv
+│   │   │       ├── Urinary Calculi~MESH:D014545.tsv
+│   │   │       ├── Urinary Incontinence~MESH:D014549.tsv
+│   │   │       ├── Urinary Retention~MESH:D016055.tsv
+│   │   │       ├── Urinary Tract Infections~MESH:D014552.tsv
+│   │   │       ├── Urination Disorders~MESH:D014555.tsv
+│   │   │       ├── Urologic Diseases~MESH:D014570.tsv
+│   │   │       ├── Urticaria~MESH:D014581.tsv
+│   │   │       ├── Uterine Cervical Neoplasms~MESH:D002583.tsv
+│   │   │       ├── Uterine Neoplasms~MESH:D014594.tsv
+│   │   │       ├── Uveitis, Anterior~MESH:D014606.tsv
+│   │   │       ├── Uveitis~MESH:D014605.tsv
+│   │   │       ├── Uveomeningoencephalitic Syndrome~MESH:D014607.tsv
+│   │   │       ├── Vaginal Neoplasms~MESH:D014625.tsv
+│   │   │       ├── Vascular Diseases~MESH:D014652.tsv
+│   │   │       ├── Vasculitis, Leukocytoclastic, Cutaneous~MESH:D018366.tsv
+│   │   │       ├── Vasculitis~MESH:D014657.tsv
+│   │   │       ├── Vasospasm, Intracranial~MESH:D020301.tsv
+│   │   │       ├── Venous Thromboembolism~MESH:D054556.tsv
+│   │   │       ├── Venous Thrombosis~MESH:D020246.tsv
+│   │   │       ├── Ventricular Dysfunction, Left~MESH:D018487.tsv
+│   │   │       ├── Ventricular Dysfunction~MESH:D018754.tsv
+│   │   │       ├── Ventricular Fibrillation~MESH:D014693.tsv
+│   │   │       ├── Ventricular Premature Complexes~MESH:D018879.tsv
+│   │   │       ├── Ventricular Remodeling~MESH:D020257.tsv
+│   │   │       ├── Vertigo~MESH:D014717.tsv
+│   │   │       ├── Viremia~MESH:D014766.tsv
+│   │   │       ├── Vision Disorders~MESH:D014786.tsv
+│   │   │       ├── Vitamin D Deficiency~MESH:D014808.tsv
+│   │   │       ├── Vitiligo~MESH:D014820.tsv
+│   │   │       ├── Vomiting~MESH:D014839.tsv
+│   │   │       ├── Waldenstrom Macroglobulinemia~MESH:D008258.tsv
+│   │   │       ├── Warts~MESH:D014860.tsv
+│   │   │       ├── Water-Electrolyte Imbalance~MESH:D014883.tsv
+│   │   │       ├── Weight Gain~MESH:D015430.tsv
+│   │   │       ├── Weight Loss~MESH:D015431.tsv
+│   │   │       ├── Wilms Tumor~MESH:D009396.tsv
+│   │   │       ├── Wolff-Parkinson-White Syndrome~MESH:D014927.tsv
+│   │   │       ├── Wound Infection~MESH:D014946.tsv
+│   │   │       ├── Wounds and Injuries~MESH:D014947.tsv
+│   │   │       ├── Xerostomia~MESH:D014987.tsv
+│   │   │       └── Zika Virus Infection~MESH:D000071243.tsv
+│   │   ├── _scripts
+│   │   │   ├── copy_to_old.py
+│   │   │   ├── submit_canbenchmark_slurms.py
+│   │   │   └── update_matrix.py
+│   │   ├── chain_pair_iptm_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_iptm_bottom100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_iptm_bottom100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_iptm_bottom100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_iptm_bottom100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_iptm_bottom100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_bottom100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_iptm_bottom100-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_iptm_bottom100.tsv
+│   │   ├── chain_pair_iptm_bottom100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_iptm_bottom100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_iptm_bottom100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_iptm_bottom100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_iptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_iptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_bottom100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_iptm_bottom100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_iptm_bottom100_plddt.tsv
+│   │   ├── chain_pair_iptm_top100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_iptm_top100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_iptm_top100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_iptm_top100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_iptm_top100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_iptm_top100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_top100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_iptm_top100-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_iptm_top100.tsv
+│   │   ├── chain_pair_iptm_top100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_iptm_top100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_iptm_top100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_iptm_top100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_iptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_iptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_top100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_iptm_top100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_iptm_top100_plddt.tsv
+│   │   ├── chain_pair_iptm_total
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_iptm-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_iptm-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_iptm.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_iptm-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_iptm-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_iptm-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_iptm.tsv
+│   │   ├── chain_pair_pae_min_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_pae_min_bottom100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_pae_min_bottom100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_pae_min_bottom100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_pae_min_bottom100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_pae_min_bottom100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_bottom100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_pae_min_bottom100-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_pae_min_bottom100.tsv
+│   │   ├── chain_pair_pae_min_bottom100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_pae_min_bottom100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_pae_min_bottom100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_pae_min_bottom100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_pae_min_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_pae_min_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_bottom100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_pae_min_bottom100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_pae_min_bottom100_plddt.tsv
+│   │   ├── chain_pair_pae_min_top100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_pae_min_top100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_pae_min_top100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_pae_min_top100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_pae_min_top100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_pae_min_top100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_top100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_pae_min_top100-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_pae_min_top100.tsv
+│   │   ├── chain_pair_pae_min_top100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_pae_min_top100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_pae_min_top100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_pae_min_top100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_pae_min_top100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_pae_min_top100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_top100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_pae_min_top100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_pae_min_top100_plddt.tsv
+│   │   ├── chain_pair_pae_min_total
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-chain_pair_pae_min-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-chain_pair_pae_min-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-chain_pair_pae_min.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-chain_pair_pae_min-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-chain_pair_pae_min-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-chain_pair_pae_min-10-associated.tsv
+│   │   │   └── summary_ndcg-chain_pair_pae_min.tsv
+│   │   ├── control_100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-control_100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-control_100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-control_100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-control_100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-control_100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-control_100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-control_100-10-associated.tsv
+│   │   │   └── summary_ndcg-control_100.tsv
+│   │   ├── control_total
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-control_all-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-control_all-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-control_all.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-control_all-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-control_all-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-control_all.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-control_total-10-associated.tsv
+│   │   │   └── summary_ndcg-control_total.tsv
+│   │   ├── iptm_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-iptm_bottom100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-iptm_bottom100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-iptm_bottom100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-iptm_bottom100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-iptm_bottom100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-iptm_bottom100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-iptm_bottom100-10-associated.tsv
+│   │   │   └── summary_ndcg-iptm_bottom100.tsv
+│   │   ├── iptm_bottom100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-iptm_bottom100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-iptm_bottom100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-iptm_bottom100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-iptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-iptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-iptm_bottom100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-iptm_bottom100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-iptm_bottom100_plddt.tsv
+│   │   ├── iptm_top100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-iptm_top100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-iptm_top100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-iptm_top100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-iptm_top100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-iptm_top100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-iptm_top100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-iptm_top100-10-associated.tsv
+│   │   │   └── summary_ndcg-iptm_top100.tsv
+│   │   ├── iptm_top100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-iptm_top100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-iptm_top100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-iptm_top100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-iptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-iptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-iptm_top100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-iptm_top100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-iptm_top100_plddt.tsv
+│   │   ├── iptm_total
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-iptm-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-iptm-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-iptm.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-iptm-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ndcg-iptm-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-iptm.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-iptm-10-associated.tsv
+│   │   │   └── summary_ndcg-iptm.tsv
+│   │   ├── ptm_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ptm_bottom100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ptm_bottom100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ptm_bottom100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ptm_bottom100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ptm_bottom100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ptm_bottom100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ptm_bottom100-10-associated.tsv
+│   │   │   └── summary_ndcg-ptm_bottom100.tsv
+│   │   ├── ptm_bottom100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ptm_bottom100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ptm_bottom100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ptm_bottom100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ptm_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ptm_bottom100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ptm_bottom100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-ptm_bottom100_plddt.tsv
+│   │   ├── ptm_top100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ptm_top100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ptm_top100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ptm_top100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ptm_top100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ptm_top100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ptm_top100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ptm_top100-10-associated.tsv
+│   │   │   └── summary_ndcg-ptm_top100.tsv
+│   │   ├── ptm_top100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ptm_top100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ptm_top100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ptm_top100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ptm_top100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ptm_top100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ptm_top100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-ptm_top100_plddt.tsv
+│   │   ├── ptm_total
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ptm-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ptm-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ptm.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ptm-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ptm-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ptm.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ptm-10-associated.tsv
+│   │   │   └── summary_ndcg-ptm.tsv
+│   │   ├── ranking_score_bottom100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ranking_score_bottom100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ranking_score_bottom100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ranking_score_bottom100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ranking_score_bottom100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ranking_score_bottom100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ranking_score_bottom100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ranking_score_bottom100-10-associated.tsv
+│   │   │   └── summary_ndcg-ranking_score_bottom100.tsv
+│   │   ├── ranking_score_bottom100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ranking_score_bottom100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ranking_score_bottom100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ranking_score_bottom100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ranking_score_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ranking_score_bottom100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ranking_score_bottom100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ranking_score_bottom100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-ranking_score_bottom100_plddt.tsv
+│   │   ├── ranking_score_top100
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ranking_score_top100-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ranking_score_top100-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ranking_score_top100.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ranking_score_top100-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ranking_score_top100-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ranking_score_top100.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ranking_score_top100-10-associated.tsv
+│   │   │   └── summary_ndcg-ranking_score_top100.tsv
+│   │   ├── ranking_score_top100_plddt
+│   │   │   ├── _scripts
+│   │   │   │   ├── pairwise_results
+│   │   │   │   │   └── pairwise_results-ranking_score_top100_plddt-10-associated.csv
+│   │   │   │   ├── raw_results
+│   │   │   │   │   ├── raw_results-ranking_score_top100_plddt-10-associated.csv
+│   │   │   │   │   └── raw_results_ndcg-ranking_score_top100_plddt.csv
+│   │   │   │   ├── results_analysed_named
+│   │   │   │   │   ├── results_analysed_named-ndcg-ranking_score_top100_plddt-10-associated.tsv
+│   │   │   │   │   ├── results_analysed_named-ranking_score_top100_plddt-10-associated.tsv
+│   │   │   │   │   └── results_analysed_named_ndcg-ranking_score_top100_plddt.tsv
+│   │   │   │   ├── run_canbenchmark.out
+│   │   │   │   ├── run_canbenchmark.py
+│   │   │   │   └── run_canbenchmark.slurm
+│   │   │   ├── summary-ranking_score_top100_plddt-10-associated.tsv
+│   │   │   └── summary_ndcg-ranking_score_top100_plddt.tsv
+│   │   └── ranking_score_total
+│   │       ├── _scripts
+│   │       │   ├── pairwise_results
+│   │       │   │   └── pairwise_results-ranking_score-10-associated.csv
+│   │       │   ├── raw_results
+│   │       │   │   ├── raw_results-ranking_score-10-associated.csv
+│   │       │   │   └── raw_results_ndcg-ranking_score.csv
+│   │       │   ├── results_analysed_named
+│   │       │   │   ├── results_analysed_named-ndcg-ranking_score-10-associated.tsv
+│   │       │   │   ├── results_analysed_named-ranking_score-10-associated.tsv
+│   │       │   │   └── results_analysed_named_ndcg-ranking_score.tsv
+│   │       │   ├── run_canbenchmark.out
+│   │       │   ├── run_canbenchmark.py
+│   │       │   └── run_canbenchmark.slurm
+│   │       ├── summary-ranking_score-10-associated.tsv
+│   │       └── summary_ndcg-ranking_score.tsv
+│   └── old
+│       ├── _scripts
+│       │   ├── submit_canbenchmark_slurms.py
+│       │   ├── temp.sh
+│       │   └── update_env.py
+│       ├── chain_pair_iptm_bottom100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_iptm_bottom100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_iptm_bottom100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_iptm_bottom100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_bottom100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_iptm_bottom100_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_iptm_bottom100_ndcg_.tsv
+│       ├── chain_pair_iptm_bottom100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_iptm_bottom100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_iptm_bottom100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_iptm_bottom100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_bottom100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_iptm_bottom100_plddt_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_iptm_bottom100_plddt_ndcg_.tsv
+│       ├── chain_pair_iptm_top100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_iptm_top100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_iptm_top100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_iptm_top100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_top100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_iptm_top100_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_iptm_top100_ndcg_.tsv
+│       ├── chain_pair_iptm_top100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_iptm_top100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_iptm_top100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_iptm_top100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_top100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_iptm_top100_plddt_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_iptm_top100_plddt_ndcg_.tsv
+│       ├── chain_pair_iptm_total
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_iptm_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_iptm_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_iptm_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_iptm_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_iptm_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_iptm_ndcg_.tsv
+│       ├── chain_pair_pae_min_bottom100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_pae_min_bottom100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_pae_min_bottom100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_pae_min_bottom100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_bottom100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_pae_min_bottom100_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_pae_min_bottom100_ndcg_.tsv
+│       ├── chain_pair_pae_min_bottom100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_pae_min_bottom100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_pae_min_bottom100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_pae_min_bottom100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_bottom100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_pae_min_bottom100_plddt_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_pae_min_bottom100_plddt_ndcg_.tsv
+│       ├── chain_pair_pae_min_top100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_pae_min_top100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_pae_min_top100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_pae_min_top100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_top100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_pae_min_top100_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_pae_min_top100_ndcg_.tsv
+│       ├── chain_pair_pae_min_top100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_pae_min_top100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_pae_min_top100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_pae_min_top100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_top100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_pae_min_top100_plddt_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_pae_min_top100_plddt_ndcg_.tsv
+│       ├── chain_pair_pae_min_total
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-chain_pair_pae_min_associated_.csv
+│       │   │   │   └── raw_results_ndcg-chain_pair_pae_min_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-chain_pair_pae_min_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-chain_pair_pae_min_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-chain_pair_pae_min_associated_.tsv
+│       │   └── summary_ndcg-chain_pair_pae_min_ndcg_.tsv
+│       ├── control_100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-control_100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-control_100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-control_100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-control_100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-control_100_associated_.tsv
+│       │   └── summary_ndcg-control_100_ndcg_.tsv
+│       ├── control_total
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-control_all_associated_.csv
+│       │   │   │   └── raw_results_ndcg-control_all_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-control_all_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-control_all_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-control_total_associated_.tsv
+│       │   └── summary_ndcg-control_total_ndcg_.tsv
+│       ├── iptm_bottom100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-iptm_bottom100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-iptm_bottom100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-iptm_bottom100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-iptm_bottom100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-iptm_bottom100_associated_.tsv
+│       │   └── summary_ndcg-iptm_bottom100_ndcg_.tsv
+│       ├── iptm_bottom100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-iptm_bottom100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-iptm_bottom100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-iptm_bottom100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-iptm_bottom100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-iptm_bottom100_plddt_associated_.tsv
+│       │   └── summary_ndcg-iptm_bottom100_plddt_ndcg_.tsv
+│       ├── iptm_top100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-iptm_top100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-iptm_top100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-iptm_top100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-iptm_top100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-iptm_top100_associated_.tsv
+│       │   └── summary_ndcg-iptm_top100_ndcg_.tsv
+│       ├── iptm_top100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-iptm_top100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-iptm_top100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-iptm_top100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-iptm_top100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-iptm_top100_plddt_associated_.tsv
+│       │   └── summary_ndcg-iptm_top100_plddt_ndcg_.tsv
+│       ├── iptm_total
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-iptm_associated_.csv
+│       │   │   │   └── raw_results_ndcg-iptm_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-iptm_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-iptm_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-iptm_associated_.tsv
+│       │   └── summary_ndcg-iptm_ndcg_.tsv
+│       ├── ptm_bottom100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ptm_bottom100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ptm_bottom100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ptm_bottom100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ptm_bottom100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ptm_bottom100_associated_.tsv
+│       │   └── summary_ndcg-ptm_bottom100_ndcg_.tsv
+│       ├── ptm_bottom100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ptm_bottom100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ptm_bottom100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ptm_bottom100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ptm_bottom100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ptm_bottom100_plddt_associated_.tsv
+│       │   └── summary_ndcg-ptm_bottom100_plddt_ndcg_.tsv
+│       ├── ptm_top100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ptm_top100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ptm_top100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ptm_top100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ptm_top100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ptm_top100_associated_.tsv
+│       │   └── summary_ndcg-ptm_top100_ndcg_.tsv
+│       ├── ptm_top100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ptm_top100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ptm_top100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ptm_top100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ptm_top100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ptm_top100_plddt_associated_.tsv
+│       │   └── summary_ndcg-ptm_top100_plddt_ndcg_.tsv
+│       ├── ptm_total
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ptm_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ptm_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ptm_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ptm_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ptm_associated_.tsv
+│       │   └── summary_ndcg-ptm_ndcg_.tsv
+│       ├── ranking_score_bottom100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ranking_score_bottom100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ranking_score_bottom100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ranking_score_bottom100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ranking_score_bottom100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ranking_score_bottom100_associated_.tsv
+│       │   └── summary_ndcg-ranking_score_bottom100_ndcg_.tsv
+│       ├── ranking_score_bottom100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ranking_score_bottom100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ranking_score_bottom100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ranking_score_bottom100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ranking_score_bottom100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ranking_score_bottom100_plddt_associated_.tsv
+│       │   └── summary_ndcg-ranking_score_bottom100_plddt_ndcg_.tsv
+│       ├── ranking_score_top100
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ranking_score_top100_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ranking_score_top100_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ranking_score_top100_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ranking_score_top100_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ranking_score_top100_associated_.tsv
+│       │   └── summary_ndcg-ranking_score_top100_ndcg_.tsv
+│       ├── ranking_score_top100_plddt
+│       │   ├── _scripts
+│       │   │   ├── raw_results
+│       │   │   │   ├── raw_results-ranking_score_top100_plddt_associated_.csv
+│       │   │   │   └── raw_results_ndcg-ranking_score_top100_plddt_ndcg_.csv
+│       │   │   ├── results_analysed_named
+│       │   │   │   ├── results_analysed_named-ranking_score_top100_plddt_associated_.tsv
+│       │   │   │   └── results_analysed_named_ndcg-ranking_score_top100_plddt_ndcg_.tsv
+│       │   │   ├── run_canbenchmark.out
+│       │   │   ├── run_canbenchmark.py
+│       │   │   └── run_canbenchmark.slurm
+│       │   ├── summary-ranking_score_top100_plddt_associated_.tsv
+│       │   └── summary_ndcg-ranking_score_top100_plddt_ndcg_.tsv
+│       └── ranking_score_total
+│           ├── _scripts
+│           │   ├── raw_results
+│           │   │   ├── raw_results-ranking_score_associated_.csv
+│           │   │   └── raw_results_ndcg-ranking_score_ndcg_.csv
+│           │   ├── results_analysed_named
+│           │   │   ├── results_analysed_named-ranking_score_associated_.tsv
+│           │   │   └── results_analysed_named_ndcg-ranking_score_ndcg_.tsv
+│           │   ├── run_canbenchmark.out
+│           │   ├── run_canbenchmark.py
+│           │   └── run_canbenchmark.slurm
+│           ├── summary-ranking_score_associated_.tsv
+│           └── summary_ndcg-ranking_score_ndcg_.tsv
+└── scripts
+    ├── make_canbenchmark_dirs.py
+    ├── make_canbenchmark_dirs_current_matrix.py
+    ├── submit_canbenchmark_slurms.py
+    ├── submit_canbenchmark_slurms_current_matrix.py
+    └── templates
+        ├── canbenchmark_new
+        │   ├── run_canbenchmark.py
+        │   └── run_canbenchmark.slurm
+        └── canbenchmark_old
+            ├── run_canbenchmark.py
+            └── run_canbenchmark.slurm

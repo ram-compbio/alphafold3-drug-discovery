@@ -1,0 +1,48 @@
+open 4ek4A~7948_model.cif
+
+hide atoms
+cartoon
+
+# Protein
+color #4C9A8A
+
+# Ribociclib
+select :LIG_XYZ
+show sel
+style sel stick
+color sel orange
+
+size stickRadius 0.25
+
+
+# Binding pocket
+select zone :LIG_XYZ 4
+
+show sel
+style sel stick
+color sel light gray
+
+
+# Restore ligand
+select :LIG_XYZ
+color sel orange
+style sel stick
+
+
+# Hydrogen bonds
+hbonds ligand reveal true
+
+
+# Center
+select :LIG_XYZ
+view sel
+
+zoom 1.1
+
+
+# Rendering
+lighting soft
+
+set bgColor white
+
+save ribociclib_panel_d_Nature.png width 3000 supersample 4
