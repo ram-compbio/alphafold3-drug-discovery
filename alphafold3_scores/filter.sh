@@ -27,12 +27,10 @@ for csv in pdb_lists/*.csv; do
     fi
     # echo "Filtering other CSV files: $csv"
 
-    # commented out because the iptm matrix and Bandockplus are already filtered for different 200 sets.
-
     # Filter iptm matrix to retain only PDB IDs listed in the CSV file
-    # awk 'NR == FNR { ids[$1]; next } $1 in ids' "$csv" ../iptm_*2449.tsv > ../iptm_${name}.tsv
+    awk 'NR == FNR { ids[$1]; next } $1 in ids' "$csv" ../iptm_*2449.tsv > ../iptm_${name}.tsv
 
     # Filter BandockPlus interaction matrix to retain only PDB IDs listed in the CSV file
-    # awk 'NR == FNR { ids[$1]; next } $1 in ids' "$csv" ../bandockplus.tsv > ../bandockplus_${name}.tsv
+    awk 'NR == FNR { ids[$1]; next } $1 in ids' "$csv" ../bandockplus.tsv > ../bandockplus_${name}.tsv
 done
 
