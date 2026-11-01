@@ -1,4 +1,4 @@
-### How AlphaFold 3 helps with multiscale drug discovery
+### How AlphaFold 3 helps with multiscale drug discovery (https://doi.org/10.64898/2026.10.19.757941 )
 
 This repository contains the computational workflows and analysis scripts used to evaluate AlphaFold 3 (AF3) interaction confidence scores for large scale drug repurposing using the Computational Analysis of Novel Drug Opportunities (CANDO) platform.
 
@@ -106,8 +106,7 @@ For strict reproduction, use the software versions, model configurations, and ex
 
 If you use this repository or the associated dataset, please cite the corresponding manuscript:
 
-How AlphaFold 3 helps with multiscale drug discovery
-Ratilal Akabari, William Mangione, Zackary Falls, Ram Samudrala
+**How AlphaFold 3 helps with multiscale drug discovery** Ratilal Akabari, William Mangione, Zackary Falls, Ram Samudrala
 2026.10.19.757941; doi: https://doi.org/10.64898/2026.10.19.757941 
 
 ## Contact
