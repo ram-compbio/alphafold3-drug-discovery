@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author: Ratie Akabari
+# Author: Ratilal Akabari
 # Description:
 # This script runs the AlphaFold3 using Singularity. It requires an input JSON file
 # (describing the sequences to process) and an output directory where the results will be stored.
@@ -20,7 +20,7 @@ trap - EXIT INT TERM
 
 INPUT_JSON=$1
 OUTPUT_DIR=$2
-SINGULARITY_DIR="/projects/academic/rams/compbio/protinfo/external/alphafold3-singularity"
+SINGULARITY_DIR="alphafold3-singularity"
 DATABASE_DIR="/util/software/data/alphafold3"
 INPUT_DIR=$(dirname "$INPUT_JSON")
 SINGULARITY_IMAGE="${SINGULARITY_DIR}/alphafold3.sif"
